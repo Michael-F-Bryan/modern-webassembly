@@ -12,7 +12,7 @@ jobs:
           - nightly
           - stable
           # MSRV - Relatively recent compiler version
-          - 1.46.0
+          - 1.59.0
     steps:
       - uses: actions/checkout@v2
       - uses: actions-rs/toolchain@v1
@@ -23,15 +23,15 @@ jobs:
       - uses: actions-rs/cargo@v1
         with:
           command: check
-          args: --all --verbose
+          args: --workspace --verbose
       - uses: actions-rs/cargo@v1
         with:
           command: build
-          args: --all --verbose
+          args: --workspace --verbose
       - uses: actions-rs/cargo@v1
         with:
           command: test
-          args: --all --verbose
+          args: --workspace --verbose
 
   api-docs:
     name: Publish API Docs to GitHub Pages
@@ -50,7 +50,7 @@ jobs:
       - uses: actions-rs/cargo@v1
         with:
           command: doc
-          args: --all --verbose
+          args: --workspace --verbose
       - name: Redirect top-level GitHub Pages
         run: "echo '<meta http-equiv=\"refresh\" content=\"0; url=guest/index.html\" />' > target/doc/index.html"
         shell: bash
