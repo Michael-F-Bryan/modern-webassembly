@@ -1,4 +1,3 @@
-use { context } from fornjot-v1
 
 record metadata {
     name: string,
@@ -10,7 +9,7 @@ record metadata {
 /// find out more about it.
 on-load: function() -> metadata
 
-generate: function(ctx: context) -> expected<shape, error>
+generate: function() -> expected<shape, error>
 
 record error {
     message: string,

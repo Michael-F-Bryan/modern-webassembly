@@ -5,7 +5,6 @@ use crate::{
     fornjot_v1::Context,
     model_v1::{Error, Metadata, Shape, Vertex},
 };
-use wit_bindgen_rust::Handle;
 
 struct ModelV1;
 
@@ -18,7 +17,8 @@ impl model_v1::ModelV1 for ModelV1 {
         }
     }
 
-    fn generate(ctx: Handle<Context>) -> Result<Shape, Error> {
+    fn generate() -> Result<Shape, Error> {
+        let ctx = Context::current();
         let width: f32 = ctx
             .get_argument("width")
             .ok_or("The \"width\" argument is missing")?

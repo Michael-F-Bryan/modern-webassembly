@@ -10,5 +10,6 @@ enum log-level {
 }
 
 resource context {
-    get-argument: function(name: string) -> option<string>
+  static current: function() -> context
+  get-argument: function(name: string) -> option<string>
 }
