@@ -1,1 +1,1 @@
-window.ALL_CRATES = ["guest","host"];
+window.ALL_CRATES = ["anyhow","async_trait","bitflags","guest","heck","host","id_arena","memchr","proc_macro2","pulldown_cmark","quote","syn","tinyvec","tinyvec_macros","unicase","unicode_normalization","unicode_segmentation","unicode_xid","wit_bindgen_gen_core","wit_bindgen_gen_rust","wit_bindgen_gen_rust_wasm","wit_bindgen_rust","wit_bindgen_rust_impl","wit_parser"];
