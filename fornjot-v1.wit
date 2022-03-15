@@ -1,0 +1,14 @@
+/// Log a message at the specified verbosity level.
+log: function(level: log-level, msg: string)
+
+enum log-level {
+  verbose,
+  debug,
+  info,
+  warning,
+  error,
+}
+
+resource context {
+    get-argument: function(name: string) -> option<string>
+}

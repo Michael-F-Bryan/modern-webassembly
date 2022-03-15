@@ -1,0 +1,28 @@
+use { context } from fornjot-v1
+
+record metadata {
+    name: string,
+    description: string,
+    version: string,
+}
+
+/// A callback that is fired when a model is first loaded, allowing Fornjot to
+/// find out more about it.
+on-load: function() -> metadata
+
+generate: function(ctx: context) -> expected<shape, error>
+
+record error {
+    message: string,
+}
+
+record shape {
+    vertices: list<vertex>,
+    faces: list<tuple<u32, u32, u32>>,
+}
+
+record vertex {
+    x: f32,
+    y: f32,
+    z: f32,
+}
