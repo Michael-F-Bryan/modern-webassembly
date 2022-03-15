@@ -1,1 +1,0 @@
-initSidebarItems({"enum":[["TypeMode",""]],"fn":[["bitcast",""],["case_name",""],["int_repr",""],["to_rust_ident",""],["wasm_type",""]],"struct":[["FnSig",""]],"trait":[["RustFunctionGenerator",""],["RustGenerator",""]]});

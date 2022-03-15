@@ -1,1 +1,1 @@
-initSidebarItems({});
+initSidebarItems({"fn":[["load_models",""],["main",""]],"mod":[["fornjot_v1",""],["model_v1",""]],"struct":[["Args",""],["Argument",""],["Fornjot",""],["Model",""]],"type":[["Arguments",""]]});
