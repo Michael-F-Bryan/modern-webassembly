@@ -1,1 +1,1 @@
-initSidebarItems({"fn":[["load_models",""],["main",""]],"mod":[["fornjot_v1",""],["model_v1",""]],"struct":[["Args",""],["Argument",""],["Fornjot",""],["Model",""]],"type":[["Arguments",""]]});
+initSidebarItems({"enum":[["Command",""]],"fn":[["list_models",""],["load_models",""],["main",""],["run",""]],"mod":[["fornjot_v1",""],["model_v1",""]],"struct":[["Args",""],["Argument",""],["Fornjot",""],["Model",""]],"type":[["Arguments",""]]});

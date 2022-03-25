@@ -85,7 +85,7 @@
 <span class="kw">impl</span> <span class="ident">model_v1::ModelV1</span> <span class="kw">for</span> <span class="ident">ModelV1</span> {
     <span class="kw">fn</span> <span class="ident">on_load</span>() -&gt; <span class="ident">Metadata</span> {
         <span class="ident">Metadata</span> {
-            <span class="ident">name</span>: <span class="macro">env!</span>(<span class="string">&quot;CARGO_MANIFEST_DIR&quot;</span>).<span class="ident">into</span>(),
+            <span class="ident">name</span>: <span class="macro">env!</span>(<span class="string">&quot;CARGO_PKG_NAME&quot;</span>).<span class="ident">into</span>(),
             <span class="ident">description</span>: <span class="macro">env!</span>(<span class="string">&quot;CARGO_PKG_DESCRIPTION&quot;</span>).<span class="ident">into</span>(),
             <span class="ident">version</span>: <span class="macro">env!</span>(<span class="string">&quot;CARGO_PKG_VERSION&quot;</span>).<span class="ident">into</span>(),
         }
@@ -142,5 +142,5 @@
     <span class="kw">fn</span> <span class="ident">from</span>(<span class="ident">s</span>: <span class="ident">S</span>) -&gt; <span class="self">Self</span> { <span class="ident">Error</span> { <span class="ident">message</span>: <span class="ident">s</span>.<span class="ident">into</span>() } }
 }
 </code></pre></div>
-</section><section id="search" class="content hidden"></section></div></main><div id="rustdoc-vars" data-root-path="../../" data-current-crate="guest" data-themes="ayu,dark,light" data-resource-suffix="" data-rustdoc-version="1.61.0-nightly (285fa7ecd 2022-03-14)" ></div>
+</section><section id="search" class="content hidden"></section></div></main><div id="rustdoc-vars" data-root-path="../../" data-current-crate="guest" data-themes="ayu,dark,light" data-resource-suffix="" data-rustdoc-version="1.61.0-nightly (63b8f01bb 2022-03-24)" ></div>
 </body></html>
