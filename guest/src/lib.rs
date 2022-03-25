@@ -11,7 +11,7 @@ struct ModelV1;
 impl model_v1::ModelV1 for ModelV1 {
     fn on_load() -> Metadata {
         Metadata {
-            name: env!("CARGO_MANIFEST_DIR").into(),
+            name: env!("CARGO_PKG_NAME").into(),
             description: env!("CARGO_PKG_DESCRIPTION").into(),
             version: env!("CARGO_PKG_VERSION").into(),
         }

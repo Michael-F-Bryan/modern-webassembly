@@ -23,31 +23,55 @@ fn main() -> Result<(), Error> {
         EnvFilter::from_default_env().add_directive("host=debug".parse()?);
     tracing_subscriber::fmt().with_env_filter(env).init();
 
-    let Args {
-        model_dir,
-        model,
-        args,
-    } = Args::from_args();
+    let Args { model_dir, cmd } = Args::from_args();
 
-    let args: HashMap<_, _> =
-        args.into_iter().map(|a| (a.key, a.value)).collect();
-
-    tracing::info!(model_dir = %model_dir.display(), %model, ?args, "Starting");
-
+    tracing::info!(model_dir = %model_dir.display(), ?cmd, "Starting");
     let models = load_models(&model_dir)?;
 
-    for model in &models {
-        let meta = model.metadata()?;
+    match cmd {
+        Command::List => list_models(&models),
+        Command::Run { model, args } => run(&models, &model, &args),
+    }
+}
 
-        tracing::debug!(?meta, "Loaded metadata");
+#[tracing::instrument(skip(models))]
+fn run(models: &[Model], name: &str, args: &[Argument]) -> Result<(), Error> {
+    let model = models
+        .iter()
+        .find(|m| match m.metadata() {
+            Ok(meta) if meta.name == name => true,
+            _ => false,
+        })
+        .context("Unable to find a model with that name")?;
 
-        model.arguments.lock().unwrap().extend(args.clone());
+    let args = args.iter().cloned().map(|a| (a.key, a.value));
+    model.arguments.lock().expect("Lock poisoned").extend(args);
 
-        let shape = model
-            .instance
-            .generate()?
-            .map_err(|e| Error::msg(e.message))?;
-        tracing::debug!(?shape, "Generated model");
+    match model
+        .instance
+        .generate()
+        .context("An error occurred while running the model generator")?
+    {
+        Ok(shape) => tracing::info!(?shape, "Generated the shape"),
+        Err(e) => {
+            tracing::error!(error = %e.message, "The model raised an error")
+        },
+    }
+
+    Ok(())
+}
+
+#[tracing::instrument(skip(models))]
+fn list_models(models: &[Model]) -> Result<(), Error> {
+    for model in models {
+        let meta: Metadata = model.metadata()?;
+
+        tracing::debug!(
+            %meta.name,
+            %meta.version,
+            %meta.description,
+            "Loaded metadata"
+        );
     }
 
     Ok(())
@@ -108,6 +132,8 @@ fn load_models(model_dir: &Path) -> Result<Vec<Model>, Error> {
         });
     }
 
+    tracing::debug!(num_models = models.len(), "Models loaded");
+
     Ok(models)
 }
 
@@ -133,7 +159,13 @@ impl FornjotV1 for Fornjot {
     type Context = Arguments;
 
     fn log(&mut self, level: LogLevel, msg: &str) {
-        todo!("{:?} {}", level, msg);
+        match level {
+            LogLevel::Error => tracing::error!(msg),
+            LogLevel::Warning => tracing::warn!(msg),
+            LogLevel::Info => tracing::info!(msg),
+            LogLevel::Debug => tracing::debug!(msg),
+            LogLevel::Verbose => tracing::trace!(msg),
+        }
     }
 
     fn context_current(&mut self) -> Self::Context {
@@ -154,14 +186,25 @@ struct Args {
     /// The directory to load models from.
     #[structopt(long, short, env, default_value = ".")]
     model_dir: PathBuf,
-    /// The model to load.
-    model: String,
-    /// Additional arguments to pass to the model.
-    #[structopt(parse(try_from_str))]
-    args: Vec<Argument>,
+    #[structopt(subcommand)]
+    cmd: Command,
 }
 
-#[derive(Debug)]
+#[derive(Debug, StructOpt)]
+enum Command {
+    /// List all available models.
+    List,
+    /// Run a named model.
+    Run {
+        /// The model to run.
+        model: String,
+        /// Additional arguments to pass to the model.
+        #[structopt(parse(try_from_str))]
+        args: Vec<Argument>,
+    },
+}
+
+#[derive(Debug, Clone)]
 struct Argument {
     key: String,
     value: String,
