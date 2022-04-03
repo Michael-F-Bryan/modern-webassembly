@@ -261,6 +261,13 @@ dependencies = [
 ]
 
 [[package]]
+name = "cuboid-model"
+version = "0.1.0"
+dependencies = [
+ "wit-bindgen-rust",
+]
+
+[[package]]
 name = "darling"
 version = "0.13.1"
 source = "registry+https://github.com/rust-lang/crates.io-index"
@@ -390,13 +397,6 @@ name = "gimli"
 version = "0.26.1"
 source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "78cc372d058dcf6d5ecd98510e7fbc9e5aec4d21de70f65fea8fecebcd881bd4"
-
-[[package]]
-name = "guest"
-version = "0.1.0"
-dependencies = [
- "wit-bindgen-rust",
-]
 
 [[package]]
 name = "hashbrown"
