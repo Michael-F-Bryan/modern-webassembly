@@ -1,0 +1,10 @@
+[package]
+name = "Michael-F-Bryan/cuboid-model"
+version = "0.1.0"
+description = "A module for generating a cuboid."
+license = "MIT or APACHE-2.0"
+
+[[module]]
+name = "cuboid-model"
+source = "cuboid_model.wasm"
+abi = "none"
