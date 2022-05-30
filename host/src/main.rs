@@ -15,10 +15,30 @@ use structopt::StructOpt;
 use tracing_subscriber::EnvFilter;
 use wasmer::{ImportObject, Module, Store, WasmerEnv};
 
-wit_bindgen_wasmer::import!("model-v1.wit");
-wit_bindgen_wasmer::export!("fornjot-v1.wit");
+wit_bindgen_wasmer::import!("../model-v1.wit");
+wit_bindgen_wasmer::export!("../fornjot-v1.wit");
 
-fn main() -> Result<(), Error> {
+fn main() {
+    let wasm = std::fs::read("model.wasm").unwrap();
+
+    let mut arguments = HashMap::new();
+    arguments.insert("width".to_string(), "3.14".to_string());
+    arguments.insert("depth".to_string(), "10".to_string());
+    let arguments = Arc::new(Mutex::new(arguments));
+
+    let store = Store::default();
+    let mut imports = ImportObject::default();
+    let host_functions = HostFunctions { arguments };
+    fornjot_v1::add_to_imports(&store, &mut imports, host_functions);
+    let module = Module::new(&store, &wasm).unwrap();
+    let (model, _instance) =
+        model_v1::ModelV1::instantiate(&store, &module, &mut imports).unwrap();
+
+    let shape = model.generate().unwrap();
+    println!("{:?}", shape);
+}
+
+fn main_() -> Result<(), Error> {
     let env =
         EnvFilter::from_default_env().add_directive("host=debug".parse()?);
     tracing_subscriber::fmt().with_env_filter(env).init();
@@ -118,7 +138,7 @@ fn load_models(model_dir: &Path) -> Result<Vec<Model>, Error> {
         crate::fornjot_v1::add_to_imports(
             &store,
             &mut imports,
-            Fornjot {
+            HostFunctions {
                 arguments: Arc::clone(&arguments),
             },
         );
@@ -150,12 +170,12 @@ impl Model {
     }
 }
 
-#[derive(Clone, Debug, WasmerEnv)]
-struct Fornjot {
+#[derive(Clone, Default, Debug, WasmerEnv)]
+struct HostFunctions {
     arguments: Arguments,
 }
 
-impl FornjotV1 for Fornjot {
+impl FornjotV1 for HostFunctions {
     type Context = Arguments;
 
     fn log(&mut self, level: LogLevel, msg: &str) {

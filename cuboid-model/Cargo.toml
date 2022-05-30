@@ -10,4 +10,4 @@ crate-type = ["rlib", "cdylib"]
 # See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
 
 [dependencies]
-wit-bindgen-rust = { git = "https://github.com/bytecodealliance/wit-bindgen" }
+wit-bindgen-rust = { git = "https://github.com/wasmerio/wit-bindgen", branch = "wasmer" }
