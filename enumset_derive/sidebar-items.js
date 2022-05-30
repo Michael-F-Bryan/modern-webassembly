@@ -1,1 +1,1 @@
-initSidebarItems({"derive":[["EnumSetType","A wrapper that parses the input enum."]]});
+initSidebarItems({"derive":[["EnumSetType",""]]});

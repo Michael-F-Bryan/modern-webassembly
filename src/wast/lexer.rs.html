@@ -1,9 +1,11 @@
-<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><meta name="generator" content="rustdoc"><meta name="description" content="Source of the Rust file `/home/runner/.cargo/registry/src/github.com-1ecc6299db9ec823/wast-39.0.0/src/lexer.rs`."><meta name="keywords" content="rust, rustlang, rust-lang"><title>lexer.rs - source</title><link rel="preload" as="font" type="font/woff2" crossorigin href="../../SourceSerif4-Regular.ttf.woff2"><link rel="preload" as="font" type="font/woff2" crossorigin href="../../FiraSans-Regular.woff2"><link rel="preload" as="font" type="font/woff2" crossorigin href="../../FiraSans-Medium.woff2"><link rel="preload" as="font" type="font/woff2" crossorigin href="../../SourceCodePro-Regular.ttf.woff2"><link rel="preload" as="font" type="font/woff2" crossorigin href="../../SourceSerif4-Bold.ttf.woff2"><link rel="preload" as="font" type="font/woff2" crossorigin href="../../SourceCodePro-Semibold.ttf.woff2"><link rel="stylesheet" type="text/css" href="../../normalize.css"><link rel="stylesheet" type="text/css" href="../../rustdoc.css" id="mainThemeStyle"><link rel="stylesheet" type="text/css" href="../../ayu.css" disabled><link rel="stylesheet" type="text/css" href="../../dark.css" disabled><link rel="stylesheet" type="text/css" href="../../light.css" id="themeStyle"><script id="default-settings" ></script><script src="../../storage.js"></script><script src="../../crates.js"></script><script defer src="../../main.js"></script><script defer src="../../source-script.js"></script><script defer src="../../source-files.js"></script>
+<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><meta name="generator" content="rustdoc"><meta name="description" content="Source of the Rust file `/home/runner/.cargo/registry/src/github.com-1ecc6299db9ec823/wast-41.0.0/src/lexer.rs`."><meta name="keywords" content="rust, rustlang, rust-lang"><title>lexer.rs - source</title><link rel="preload" as="font" type="font/woff2" crossorigin href="../../SourceSerif4-Regular.ttf.woff2"><link rel="preload" as="font" type="font/woff2" crossorigin href="../../FiraSans-Regular.woff2"><link rel="preload" as="font" type="font/woff2" crossorigin href="../../FiraSans-Medium.woff2"><link rel="preload" as="font" type="font/woff2" crossorigin href="../../SourceCodePro-Regular.ttf.woff2"><link rel="preload" as="font" type="font/woff2" crossorigin href="../../SourceSerif4-Bold.ttf.woff2"><link rel="preload" as="font" type="font/woff2" crossorigin href="../../SourceCodePro-Semibold.ttf.woff2"><link rel="stylesheet" type="text/css" href="../../normalize.css"><link rel="stylesheet" type="text/css" href="../../rustdoc.css" id="mainThemeStyle"><link rel="stylesheet" type="text/css" href="../../ayu.css" disabled><link rel="stylesheet" type="text/css" href="../../dark.css" disabled><link rel="stylesheet" type="text/css" href="../../light.css" id="themeStyle"><script id="default-settings" ></script><script src="../../storage.js"></script><script src="../../crates.js"></script><script defer src="../../main.js"></script><script defer src="../../source-script.js"></script><script defer src="../../source-files.js"></script>
     <noscript><link rel="stylesheet" href="../../noscript.css"></noscript><link rel="alternate icon" type="image/png" href="../../favicon-16x16.png"><link rel="alternate icon" type="image/png" href="../../favicon-32x32.png"><link rel="icon" type="image/svg+xml" href="../../favicon.svg"></head><body class="rustdoc source"><!--[if lte IE 11]><div class="warning">This old browser is unsupported and will most likely display funky things.</div><![endif]--><nav class="mobile-topbar"><button class="sidebar-menu-toggle">&#9776;</button><a class="sidebar-logo" href="../../wast/index.html"><div class="logo-container"><img class="rust-logo" src="../../rust-logo.svg" alt="logo"></div>
         </a><h2 class="location"></h2>
     </nav>
     <nav class="sidebar"><a class="sidebar-logo" href="../../wast/index.html"><div class="logo-container"><img class="rust-logo" src="../../rust-logo.svg" alt="logo"></div>
-        </a></nav><main><div class="width-limiter"><div class="sub-container"><a class="sub-logo-container" href="../../wast/index.html"><img class="rust-logo" src="../../rust-logo.svg" alt="logo"></a><nav class="sub"><div class="theme-picker hidden"><button id="theme-picker" aria-label="Pick another theme!" aria-haspopup="menu" title="themes"><img width="22" height="22" alt="Pick another theme!" src="../../brush.svg"></button><div id="theme-choices" role="menu"></div></div><form class="search-form"><div class="search-container"><span></span><input class="search-input" name="search" autocomplete="off" spellcheck="false" placeholder="Click or press ‘S’ to search, ‘?’ for more options…" type="search"><button type="button" id="help-button" title="help">?</button><a id="settings-menu" href="../../settings.html" title="settings"><img width="22" height="22" alt="Change settings" src="../../wheel.svg"></a></div></form></nav></div><section id="main-content" class="content"><div class="example-wrap"><pre class="line-numbers"><span id="1">1</span>
+        </a></nav><main><div class="width-limiter"><div class="sub-container"><a class="sub-logo-container" href="../../wast/index.html"><img class="rust-logo" src="../../rust-logo.svg" alt="logo"></a><nav class="sub"><form class="search-form"><div class="search-container"><span></span><input class="search-input" name="search" autocomplete="off" spellcheck="false" placeholder="Click or press ‘S’ to search, ‘?’ for more options…" type="search"><button type="button" id="help-button" title="help">?</button><div id="settings-menu" tabindex="-1">
+                                <a href="../../settings.html" title="settings"><img width="22" height="22" alt="Change settings" src="../../wheel.svg"></a></div>
+                        </div></form></nav></div><section id="main-content" class="content"><div class="example-wrap"><pre class="line-numbers"><span id="1">1</span>
 <span id="2">2</span>
 <span id="3">3</span>
 <span id="4">4</span>
@@ -1273,6 +1275,7 @@
 <span id="1268">1268</span>
 <span id="1269">1269</span>
 <span id="1270">1270</span>
+<span id="1271">1271</span>
 </pre><pre class="rust"><code><span class="doccomment">//! Definition of a lexer for the WebAssembly text format.</span>
 <span class="doccomment">//!</span>
 <span class="doccomment">//! This module provides a [`Lexer`][] type which is an iterate over the raw</span>
@@ -1299,7 +1302,8 @@
 <span class="doccomment">//!</span>
 <span class="doccomment">//! [`Lexer`]: crate::lexer::Lexer</span>
 
-<span class="kw">use</span> <span class="kw">crate</span>::{<span class="ident">Error</span>, <span class="ident">Span</span>};
+<span class="kw">use</span> <span class="ident"><span class="kw">crate</span>::token::Span</span>;
+<span class="kw">use</span> <span class="ident"><span class="kw">crate</span>::Error</span>;
 <span class="kw">use</span> <span class="ident">std::borrow::Cow</span>;
 <span class="kw">use</span> <span class="ident">std::char</span>;
 <span class="kw">use</span> <span class="ident">std::fmt</span>;
@@ -1307,7 +1311,7 @@
 
 <span class="doccomment">/// A structure used to lex the s-expression syntax of WAT files.</span>
 <span class="doccomment">///</span>
-<span class="doccomment">/// This structure is used to generate [`Source`] items, which should account for</span>
+<span class="doccomment">/// This structure is used to generate [`Token`] items, which should account for</span>
 <span class="doccomment">/// every single byte of the input as we iterate over it. A [`LexError`] is</span>
 <span class="doccomment">/// returned for any non-lexable text.</span>
 <span class="attribute">#[<span class="ident">derive</span>(<span class="ident">Clone</span>)]</span>
@@ -1758,10 +1762,10 @@
     }
 
     <span class="kw">fn</span> <span class="ident">number</span>(<span class="kw-2">&amp;</span><span class="self">self</span>, <span class="ident">src</span>: <span class="kw-2">&amp;</span><span class="lifetime">&#39;a</span> <span class="ident">str</span>) -&gt; <span class="prelude-ty">Option</span><span class="op">&lt;</span><span class="ident">Token</span><span class="op">&lt;</span><span class="lifetime">&#39;a</span><span class="op">&gt;</span><span class="op">&gt;</span> {
-        <span class="kw">let</span> (<span class="ident">sign</span>, <span class="ident">num</span>) <span class="op">=</span> <span class="kw">if</span> <span class="ident">src</span>.<span class="ident">starts_with</span>(<span class="string">&#39;+&#39;</span>) {
-            (<span class="prelude-val">Some</span>(<span class="ident">SignToken::Plus</span>), <span class="kw-2">&amp;</span><span class="ident">src</span>[<span class="number">1</span>..])
-        } <span class="kw">else</span> <span class="kw">if</span> <span class="ident">src</span>.<span class="ident">starts_with</span>(<span class="string">&#39;-&#39;</span>) {
-            (<span class="prelude-val">Some</span>(<span class="ident">SignToken::Minus</span>), <span class="kw-2">&amp;</span><span class="ident">src</span>[<span class="number">1</span>..])
+        <span class="kw">let</span> (<span class="ident">sign</span>, <span class="ident">num</span>) <span class="op">=</span> <span class="kw">if</span> <span class="kw">let</span> <span class="prelude-val">Some</span>(<span class="ident">stripped</span>) <span class="op">=</span> <span class="ident">src</span>.<span class="ident">strip_prefix</span>(<span class="string">&#39;+&#39;</span>) {
+            (<span class="prelude-val">Some</span>(<span class="ident">SignToken::Plus</span>), <span class="ident">stripped</span>)
+        } <span class="kw">else</span> <span class="kw">if</span> <span class="kw">let</span> <span class="prelude-val">Some</span>(<span class="ident">stripped</span>) <span class="op">=</span> <span class="ident">src</span>.<span class="ident">strip_prefix</span>(<span class="string">&#39;-&#39;</span>) {
+            (<span class="prelude-val">Some</span>(<span class="ident">SignToken::Minus</span>), <span class="ident">stripped</span>)
         } <span class="kw">else</span> {
             (<span class="prelude-val">None</span>, <span class="ident">src</span>)
         };
@@ -1782,8 +1786,8 @@
                     <span class="ident">negative</span>,
                 },
             }))));
-        } <span class="kw">else</span> <span class="kw">if</span> <span class="ident">num</span>.<span class="ident">starts_with</span>(<span class="string">&quot;nan:0x&quot;</span>) {
-            <span class="kw">let</span> <span class="kw-2">mut</span> <span class="ident">it</span> <span class="op">=</span> <span class="ident">num</span>[<span class="number">6</span>..].<span class="ident">chars</span>();
+        } <span class="kw">else</span> <span class="kw">if</span> <span class="kw">let</span> <span class="prelude-val">Some</span>(<span class="ident">stripped</span>) <span class="op">=</span> <span class="ident">num</span>.<span class="ident">strip_prefix</span>(<span class="string">&quot;nan:0x&quot;</span>) {
+            <span class="kw">let</span> <span class="kw-2">mut</span> <span class="ident">it</span> <span class="op">=</span> <span class="ident">stripped</span>.<span class="ident">chars</span>();
             <span class="kw">let</span> <span class="ident">to_parse</span> <span class="op">=</span> <span class="ident">skip_undescores</span>(<span class="kw-2">&amp;mut</span> <span class="ident">it</span>, <span class="bool-val">false</span>, <span class="ident">char::is_ascii_hexdigit</span>)<span class="question-mark">?</span>;
             <span class="kw">if</span> <span class="ident">it</span>.<span class="ident">next</span>().<span class="ident">is_some</span>() {
                 <span class="kw">return</span> <span class="prelude-val">None</span>;
@@ -1799,9 +1803,9 @@
         }
 
         <span class="comment">// Figure out if we&#39;re a hex number or not</span>
-        <span class="kw">let</span> (<span class="kw-2">mut</span> <span class="ident">it</span>, <span class="ident">hex</span>, <span class="ident">test_valid</span>) <span class="op">=</span> <span class="kw">if</span> <span class="ident">num</span>.<span class="ident">starts_with</span>(<span class="string">&quot;0x&quot;</span>) {
+        <span class="kw">let</span> (<span class="kw-2">mut</span> <span class="ident">it</span>, <span class="ident">hex</span>, <span class="ident">test_valid</span>) <span class="op">=</span> <span class="kw">if</span> <span class="kw">let</span> <span class="prelude-val">Some</span>(<span class="ident">stripped</span>) <span class="op">=</span> <span class="ident">num</span>.<span class="ident">strip_prefix</span>(<span class="string">&quot;0x&quot;</span>) {
             (
-                <span class="ident">num</span>[<span class="number">2</span>..].<span class="ident">chars</span>(),
+                <span class="ident">stripped</span>.<span class="ident">chars</span>(),
                 <span class="bool-val">true</span>,
                 <span class="ident">char::is_ascii_hexdigit</span> <span class="kw">as</span> <span class="kw">fn</span>(<span class="kw-2">&amp;</span><span class="ident">char</span>) -&gt; <span class="ident">bool</span>,
             )
@@ -2544,5 +2548,5 @@
     }
 }
 </code></pre></div>
-</section><section id="search" class="content hidden"></section></div></main><div id="rustdoc-vars" data-root-path="../../" data-current-crate="wast" data-themes="ayu,dark,light" data-resource-suffix="" data-rustdoc-version="1.61.0-nightly (63b8f01bb 2022-03-24)" ></div>
+</section></div></main><div id="rustdoc-vars" data-root-path="../../" data-current-crate="wast" data-themes="ayu,dark,light" data-resource-suffix="" data-rustdoc-version="1.63.0-nightly (28b891916 2022-05-29)" ></div>
 </body></html>

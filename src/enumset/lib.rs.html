@@ -1,9 +1,11 @@
-<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><meta name="generator" content="rustdoc"><meta name="description" content="Source of the Rust file `/home/runner/.cargo/registry/src/github.com-1ecc6299db9ec823/enumset-1.0.8/src/lib.rs`."><meta name="keywords" content="rust, rustlang, rust-lang"><title>lib.rs - source</title><link rel="preload" as="font" type="font/woff2" crossorigin href="../../SourceSerif4-Regular.ttf.woff2"><link rel="preload" as="font" type="font/woff2" crossorigin href="../../FiraSans-Regular.woff2"><link rel="preload" as="font" type="font/woff2" crossorigin href="../../FiraSans-Medium.woff2"><link rel="preload" as="font" type="font/woff2" crossorigin href="../../SourceCodePro-Regular.ttf.woff2"><link rel="preload" as="font" type="font/woff2" crossorigin href="../../SourceSerif4-Bold.ttf.woff2"><link rel="preload" as="font" type="font/woff2" crossorigin href="../../SourceCodePro-Semibold.ttf.woff2"><link rel="stylesheet" type="text/css" href="../../normalize.css"><link rel="stylesheet" type="text/css" href="../../rustdoc.css" id="mainThemeStyle"><link rel="stylesheet" type="text/css" href="../../ayu.css" disabled><link rel="stylesheet" type="text/css" href="../../dark.css" disabled><link rel="stylesheet" type="text/css" href="../../light.css" id="themeStyle"><script id="default-settings" ></script><script src="../../storage.js"></script><script src="../../crates.js"></script><script defer src="../../main.js"></script><script defer src="../../source-script.js"></script><script defer src="../../source-files.js"></script>
+<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><meta name="generator" content="rustdoc"><meta name="description" content="Source of the Rust file `/home/runner/.cargo/registry/src/github.com-1ecc6299db9ec823/enumset-1.0.11/src/lib.rs`."><meta name="keywords" content="rust, rustlang, rust-lang"><title>lib.rs - source</title><link rel="preload" as="font" type="font/woff2" crossorigin href="../../SourceSerif4-Regular.ttf.woff2"><link rel="preload" as="font" type="font/woff2" crossorigin href="../../FiraSans-Regular.woff2"><link rel="preload" as="font" type="font/woff2" crossorigin href="../../FiraSans-Medium.woff2"><link rel="preload" as="font" type="font/woff2" crossorigin href="../../SourceCodePro-Regular.ttf.woff2"><link rel="preload" as="font" type="font/woff2" crossorigin href="../../SourceSerif4-Bold.ttf.woff2"><link rel="preload" as="font" type="font/woff2" crossorigin href="../../SourceCodePro-Semibold.ttf.woff2"><link rel="stylesheet" type="text/css" href="../../normalize.css"><link rel="stylesheet" type="text/css" href="../../rustdoc.css" id="mainThemeStyle"><link rel="stylesheet" type="text/css" href="../../ayu.css" disabled><link rel="stylesheet" type="text/css" href="../../dark.css" disabled><link rel="stylesheet" type="text/css" href="../../light.css" id="themeStyle"><script id="default-settings" ></script><script src="../../storage.js"></script><script src="../../crates.js"></script><script defer src="../../main.js"></script><script defer src="../../source-script.js"></script><script defer src="../../source-files.js"></script>
     <noscript><link rel="stylesheet" href="../../noscript.css"></noscript><link rel="alternate icon" type="image/png" href="../../favicon-16x16.png"><link rel="alternate icon" type="image/png" href="../../favicon-32x32.png"><link rel="icon" type="image/svg+xml" href="../../favicon.svg"></head><body class="rustdoc source"><!--[if lte IE 11]><div class="warning">This old browser is unsupported and will most likely display funky things.</div><![endif]--><nav class="mobile-topbar"><button class="sidebar-menu-toggle">&#9776;</button><a class="sidebar-logo" href="../../enumset/index.html"><div class="logo-container"><img class="rust-logo" src="../../rust-logo.svg" alt="logo"></div>
         </a><h2 class="location"></h2>
     </nav>
     <nav class="sidebar"><a class="sidebar-logo" href="../../enumset/index.html"><div class="logo-container"><img class="rust-logo" src="../../rust-logo.svg" alt="logo"></div>
-        </a></nav><main><div class="width-limiter"><div class="sub-container"><a class="sub-logo-container" href="../../enumset/index.html"><img class="rust-logo" src="../../rust-logo.svg" alt="logo"></a><nav class="sub"><div class="theme-picker hidden"><button id="theme-picker" aria-label="Pick another theme!" aria-haspopup="menu" title="themes"><img width="22" height="22" alt="Pick another theme!" src="../../brush.svg"></button><div id="theme-choices" role="menu"></div></div><form class="search-form"><div class="search-container"><span></span><input class="search-input" name="search" autocomplete="off" spellcheck="false" placeholder="Click or press ‘S’ to search, ‘?’ for more options…" type="search"><button type="button" id="help-button" title="help">?</button><a id="settings-menu" href="../../settings.html" title="settings"><img width="22" height="22" alt="Change settings" src="../../wheel.svg"></a></div></form></nav></div><section id="main-content" class="content"><div class="example-wrap"><pre class="line-numbers"><span id="1">1</span>
+        </a></nav><main><div class="width-limiter"><div class="sub-container"><a class="sub-logo-container" href="../../enumset/index.html"><img class="rust-logo" src="../../rust-logo.svg" alt="logo"></a><nav class="sub"><form class="search-form"><div class="search-container"><span></span><input class="search-input" name="search" autocomplete="off" spellcheck="false" placeholder="Click or press ‘S’ to search, ‘?’ for more options…" type="search"><button type="button" id="help-button" title="help">?</button><div id="settings-menu" tabindex="-1">
+                                <a href="../../settings.html" title="settings"><img width="22" height="22" alt="Change settings" src="../../wheel.svg"></a></div>
+                        </div></form></nav></div><section id="main-content" class="content"><div class="example-wrap"><pre class="line-numbers"><span id="1">1</span>
 <span id="2">2</span>
 <span id="3">3</span>
 <span id="4">4</span>
@@ -737,8 +739,247 @@
 <span id="732">732</span>
 <span id="733">733</span>
 <span id="734">734</span>
+<span id="735">735</span>
+<span id="736">736</span>
+<span id="737">737</span>
+<span id="738">738</span>
+<span id="739">739</span>
+<span id="740">740</span>
+<span id="741">741</span>
+<span id="742">742</span>
+<span id="743">743</span>
+<span id="744">744</span>
+<span id="745">745</span>
+<span id="746">746</span>
+<span id="747">747</span>
+<span id="748">748</span>
+<span id="749">749</span>
+<span id="750">750</span>
+<span id="751">751</span>
+<span id="752">752</span>
+<span id="753">753</span>
+<span id="754">754</span>
+<span id="755">755</span>
+<span id="756">756</span>
+<span id="757">757</span>
+<span id="758">758</span>
+<span id="759">759</span>
+<span id="760">760</span>
+<span id="761">761</span>
+<span id="762">762</span>
+<span id="763">763</span>
+<span id="764">764</span>
+<span id="765">765</span>
+<span id="766">766</span>
+<span id="767">767</span>
+<span id="768">768</span>
+<span id="769">769</span>
+<span id="770">770</span>
+<span id="771">771</span>
+<span id="772">772</span>
+<span id="773">773</span>
+<span id="774">774</span>
+<span id="775">775</span>
+<span id="776">776</span>
+<span id="777">777</span>
+<span id="778">778</span>
+<span id="779">779</span>
+<span id="780">780</span>
+<span id="781">781</span>
+<span id="782">782</span>
+<span id="783">783</span>
+<span id="784">784</span>
+<span id="785">785</span>
+<span id="786">786</span>
+<span id="787">787</span>
+<span id="788">788</span>
+<span id="789">789</span>
+<span id="790">790</span>
+<span id="791">791</span>
+<span id="792">792</span>
+<span id="793">793</span>
+<span id="794">794</span>
+<span id="795">795</span>
+<span id="796">796</span>
+<span id="797">797</span>
+<span id="798">798</span>
+<span id="799">799</span>
+<span id="800">800</span>
+<span id="801">801</span>
+<span id="802">802</span>
+<span id="803">803</span>
+<span id="804">804</span>
+<span id="805">805</span>
+<span id="806">806</span>
+<span id="807">807</span>
+<span id="808">808</span>
+<span id="809">809</span>
+<span id="810">810</span>
+<span id="811">811</span>
+<span id="812">812</span>
+<span id="813">813</span>
+<span id="814">814</span>
+<span id="815">815</span>
+<span id="816">816</span>
+<span id="817">817</span>
+<span id="818">818</span>
+<span id="819">819</span>
+<span id="820">820</span>
+<span id="821">821</span>
+<span id="822">822</span>
+<span id="823">823</span>
+<span id="824">824</span>
+<span id="825">825</span>
+<span id="826">826</span>
+<span id="827">827</span>
+<span id="828">828</span>
+<span id="829">829</span>
+<span id="830">830</span>
+<span id="831">831</span>
+<span id="832">832</span>
+<span id="833">833</span>
+<span id="834">834</span>
+<span id="835">835</span>
+<span id="836">836</span>
+<span id="837">837</span>
+<span id="838">838</span>
+<span id="839">839</span>
+<span id="840">840</span>
+<span id="841">841</span>
+<span id="842">842</span>
+<span id="843">843</span>
+<span id="844">844</span>
+<span id="845">845</span>
+<span id="846">846</span>
+<span id="847">847</span>
+<span id="848">848</span>
+<span id="849">849</span>
+<span id="850">850</span>
+<span id="851">851</span>
+<span id="852">852</span>
+<span id="853">853</span>
+<span id="854">854</span>
+<span id="855">855</span>
+<span id="856">856</span>
+<span id="857">857</span>
+<span id="858">858</span>
+<span id="859">859</span>
+<span id="860">860</span>
+<span id="861">861</span>
+<span id="862">862</span>
+<span id="863">863</span>
+<span id="864">864</span>
+<span id="865">865</span>
+<span id="866">866</span>
+<span id="867">867</span>
+<span id="868">868</span>
+<span id="869">869</span>
+<span id="870">870</span>
+<span id="871">871</span>
+<span id="872">872</span>
+<span id="873">873</span>
+<span id="874">874</span>
+<span id="875">875</span>
+<span id="876">876</span>
+<span id="877">877</span>
+<span id="878">878</span>
+<span id="879">879</span>
+<span id="880">880</span>
+<span id="881">881</span>
+<span id="882">882</span>
+<span id="883">883</span>
+<span id="884">884</span>
+<span id="885">885</span>
+<span id="886">886</span>
+<span id="887">887</span>
+<span id="888">888</span>
+<span id="889">889</span>
+<span id="890">890</span>
+<span id="891">891</span>
+<span id="892">892</span>
+<span id="893">893</span>
+<span id="894">894</span>
+<span id="895">895</span>
+<span id="896">896</span>
+<span id="897">897</span>
+<span id="898">898</span>
+<span id="899">899</span>
+<span id="900">900</span>
+<span id="901">901</span>
+<span id="902">902</span>
+<span id="903">903</span>
+<span id="904">904</span>
+<span id="905">905</span>
+<span id="906">906</span>
+<span id="907">907</span>
+<span id="908">908</span>
+<span id="909">909</span>
+<span id="910">910</span>
+<span id="911">911</span>
+<span id="912">912</span>
+<span id="913">913</span>
+<span id="914">914</span>
+<span id="915">915</span>
+<span id="916">916</span>
+<span id="917">917</span>
+<span id="918">918</span>
+<span id="919">919</span>
+<span id="920">920</span>
+<span id="921">921</span>
+<span id="922">922</span>
+<span id="923">923</span>
+<span id="924">924</span>
+<span id="925">925</span>
+<span id="926">926</span>
+<span id="927">927</span>
+<span id="928">928</span>
+<span id="929">929</span>
+<span id="930">930</span>
+<span id="931">931</span>
+<span id="932">932</span>
+<span id="933">933</span>
+<span id="934">934</span>
+<span id="935">935</span>
+<span id="936">936</span>
+<span id="937">937</span>
+<span id="938">938</span>
+<span id="939">939</span>
+<span id="940">940</span>
+<span id="941">941</span>
+<span id="942">942</span>
+<span id="943">943</span>
+<span id="944">944</span>
+<span id="945">945</span>
+<span id="946">946</span>
+<span id="947">947</span>
+<span id="948">948</span>
+<span id="949">949</span>
+<span id="950">950</span>
+<span id="951">951</span>
+<span id="952">952</span>
+<span id="953">953</span>
+<span id="954">954</span>
+<span id="955">955</span>
+<span id="956">956</span>
+<span id="957">957</span>
+<span id="958">958</span>
+<span id="959">959</span>
+<span id="960">960</span>
+<span id="961">961</span>
+<span id="962">962</span>
+<span id="963">963</span>
+<span id="964">964</span>
+<span id="965">965</span>
+<span id="966">966</span>
+<span id="967">967</span>
+<span id="968">968</span>
+<span id="969">969</span>
+<span id="970">970</span>
+<span id="971">971</span>
 </pre><pre class="rust"><code><span class="attribute">#![<span class="ident">no_std</span>]</span>
 <span class="attribute">#![<span class="ident">forbid</span>(<span class="ident">missing_docs</span>)]</span>
+<span class="comment">// The safety requirement is &quot;use the procedural derive&quot;.</span>
+<span class="attribute">#![<span class="ident">allow</span>(<span class="ident">clippy::missing_safety_doc</span>)]</span>
 
 <span class="doccomment">//! A library for defining enums that can be used in compact bit sets. It supports enums up to 128</span>
 <span class="doccomment">//! variants, and has a macro to use these sets in constants.</span>
@@ -757,7 +998,8 @@
 <span class="doccomment">//! }</span>
 <span class="doccomment">//! ```</span>
 <span class="doccomment">//!</span>
-<span class="doccomment">//! For more information on more advanced use cases, see the documentation for [`EnumSetType`].</span>
+<span class="doccomment">//! For more information on more advanced use cases, see the documentation for</span>
+<span class="doccomment">//! [`#[derive(EnumSetType)]`](./derive.EnumSetType.html).</span>
 <span class="doccomment">//!</span>
 <span class="doccomment">//! # Working with EnumSets</span>
 <span class="doccomment">//!</span>
@@ -814,8 +1056,6 @@
 <span class="doccomment">//! assert_eq!(set, Enum::A | Enum::E | Enum::G);</span>
 <span class="doccomment">//! ```</span>
 
-<span class="kw">pub</span> <span class="kw">use</span> <span class="ident">enumset_derive::EnumSetType</span>;
-
 <span class="kw">use</span> <span class="ident">core::cmp::Ordering</span>;
 <span class="kw">use</span> <span class="ident">core::fmt</span>;
 <span class="kw">use</span> <span class="ident">core::fmt</span>::{<span class="ident">Debug</span>, <span class="ident">Formatter</span>};
@@ -832,7 +1072,8 @@
     <span class="kw">pub</span> <span class="kw">use</span> <span class="ident">::core</span> <span class="kw">as</span> <span class="ident">core_export</span>;
 
     <span class="doccomment">/// A reexport of serde so there is no requirement to depend on serde.</span>
-    <span class="attribute">#[<span class="ident">cfg</span>(<span class="ident">feature</span> <span class="op">=</span> <span class="string">&quot;serde&quot;</span>)]</span> <span class="kw">pub</span> <span class="kw">use</span> <span class="ident">serde2</span> <span class="kw">as</span> <span class="ident">serde</span>;
+    <span class="attribute">#[<span class="ident">cfg</span>(<span class="ident">feature</span> <span class="op">=</span> <span class="string">&quot;serde&quot;</span>)]</span>
+    <span class="kw">pub</span> <span class="kw">use</span> <span class="ident">serde2</span> <span class="kw">as</span> <span class="ident">serde</span>;
 
     <span class="doccomment">/// The actual members of EnumSetType. Put here to avoid polluting global namespaces.</span>
     <span class="kw">pub</span> <span class="kw">unsafe</span> <span class="kw">trait</span> <span class="ident">EnumSetTypePrivate</span> {
@@ -852,44 +1093,75 @@
         <span class="doccomment">/// can control how `EnumSet` is serialized.</span>
         <span class="attribute">#[<span class="ident">cfg</span>(<span class="ident">feature</span> <span class="op">=</span> <span class="string">&quot;serde&quot;</span>)]</span>
         <span class="kw">fn</span> <span class="ident">serialize</span><span class="op">&lt;</span><span class="ident">S</span>: <span class="ident">serde::Serializer</span><span class="op">&gt;</span>(<span class="ident">set</span>: <span class="ident">EnumSet</span><span class="op">&lt;</span><span class="self">Self</span><span class="op">&gt;</span>, <span class="ident">ser</span>: <span class="ident">S</span>) -&gt; <span class="prelude-ty">Result</span><span class="op">&lt;</span><span class="ident">S::Ok</span>, <span class="ident">S::Error</span><span class="op">&gt;</span>
-            <span class="kw">where</span> <span class="self">Self</span>: <span class="ident">EnumSetType</span>;
+        <span class="kw">where</span> <span class="self">Self</span>: <span class="ident">EnumSetType</span>;
         <span class="doccomment">/// Deserializes the `EnumSet`.</span>
         <span class="attribute">#[<span class="ident">cfg</span>(<span class="ident">feature</span> <span class="op">=</span> <span class="string">&quot;serde&quot;</span>)]</span>
         <span class="kw">fn</span> <span class="ident">deserialize</span><span class="op">&lt;</span><span class="lifetime">&#39;de</span>, <span class="ident">D</span>: <span class="ident">serde::Deserializer</span><span class="op">&lt;</span><span class="lifetime">&#39;de</span><span class="op">&gt;</span><span class="op">&gt;</span>(<span class="ident">de</span>: <span class="ident">D</span>) -&gt; <span class="prelude-ty">Result</span><span class="op">&lt;</span><span class="ident">EnumSet</span><span class="op">&lt;</span><span class="self">Self</span><span class="op">&gt;</span>, <span class="ident">D::Error</span><span class="op">&gt;</span>
-            <span class="kw">where</span> <span class="self">Self</span>: <span class="ident">EnumSetType</span>;
+        <span class="kw">where</span> <span class="self">Self</span>: <span class="ident">EnumSetType</span>;
     }
 }
+<span class="attribute">#[<span class="ident">cfg</span>(<span class="ident">feature</span> <span class="op">=</span> <span class="string">&quot;serde&quot;</span>)]</span>
+<span class="kw">use</span> <span class="ident"><span class="kw">crate</span>::__internal::serde</span>;
 <span class="kw">use</span> <span class="ident"><span class="kw">crate</span>::__internal::EnumSetTypePrivate</span>;
-<span class="attribute">#[<span class="ident">cfg</span>(<span class="ident">feature</span> <span class="op">=</span> <span class="string">&quot;serde&quot;</span>)]</span> <span class="kw">use</span> <span class="ident"><span class="kw">crate</span>::__internal::serde</span>;
-<span class="attribute">#[<span class="ident">cfg</span>(<span class="ident">feature</span> <span class="op">=</span> <span class="string">&quot;serde&quot;</span>)]</span> <span class="kw">use</span> <span class="ident"><span class="kw">crate</span>::serde</span>::{<span class="ident">Serialize</span>, <span class="ident">Deserialize</span>};
+<span class="attribute">#[<span class="ident">cfg</span>(<span class="ident">feature</span> <span class="op">=</span> <span class="string">&quot;serde&quot;</span>)]</span>
+<span class="kw">use</span> <span class="ident"><span class="kw">crate</span>::serde</span>::{<span class="ident">Deserialize</span>, <span class="ident">Serialize</span>};
 
 <span class="kw">mod</span> <span class="ident">repr</span>;
 <span class="kw">use</span> <span class="ident"><span class="kw">crate</span>::repr::EnumSetTypeRepr</span>;
 
-<span class="doccomment">/// The trait used to define enum types that may be used with [`EnumSet`].</span>
+<span class="doccomment">/// The procedural macro used to derive [`EnumSetType`], and allow enums to be used with</span>
+<span class="doccomment">/// [`EnumSet`].</span>
 <span class="doccomment">///</span>
-<span class="doccomment">/// This trait should be implemented using `#[derive(EnumSetType)]`. Its internal structure is</span>
-<span class="doccomment">/// not stable, and may change at any time.</span>
+<span class="doccomment">/// It may be used with any enum with no data fields, at most 127 variants, and no variant</span>
+<span class="doccomment">/// discriminators larger than 127.</span>
 <span class="doccomment">///</span>
-<span class="doccomment">/// # Custom Derive</span>
+<span class="doccomment">/// # Additional Impls</span>
 <span class="doccomment">///</span>
-<span class="doccomment">/// Any C-like enum is supported, as long as there are no more than 128 variants in the enum,</span>
-<span class="doccomment">/// and no variant discriminator is larger than 127.</span>
+<span class="doccomment">/// In addition to the implementation of `EnumSetType`, this procedural macro creates multiple</span>
+<span class="doccomment">/// other impls that are either required for the macro to work, or make the procedural macro more</span>
+<span class="doccomment">/// ergonomic to use.</span>
 <span class="doccomment">///</span>
-<span class="doccomment">/// The custom derive for [`EnumSetType`] automatically creates implementations of [`PartialEq`],</span>
-<span class="doccomment">/// [`Sub`], [`BitAnd`], [`BitOr`], [`BitXor`], and [`Not`] allowing the enum to be used as</span>
-<span class="doccomment">/// if it were an [`EnumSet`] in expressions. This can be disabled by adding an `#[enumset(no_ops)]`</span>
-<span class="doccomment">/// annotation to the enum.</span>
+<span class="doccomment">/// A full list of traits implemented as is follows:</span>
 <span class="doccomment">///</span>
-<span class="doccomment">/// The custom derive for `EnumSetType` automatically implements [`Copy`], [`Clone`], [`Eq`], and</span>
-<span class="doccomment">/// [`PartialEq`] on the enum. These are required for the [`EnumSet`] to function.</span>
+<span class="doccomment">/// * [`Copy`], [`Clone`], [`Eq`], [`PartialEq`] implementations are created to allow `EnumSet`</span>
+<span class="doccomment">///   to function properly. These automatic implementations may be suppressed using</span>
+<span class="doccomment">///   `#[enumset(no_super_impls)]`, but these traits must still be implemented in another way.</span>
+<span class="doccomment">/// * [`PartialEq`], [`Sub`], [`BitAnd`], [`BitOr`], [`BitXor`], and [`Not`] implementations are</span>
+<span class="doccomment">///   created to allow the crate to be used more ergonomically in expressions. These automatic</span>
+<span class="doccomment">///   implementations may be suppressed using `#[enumset(no_ops)]`.</span>
 <span class="doccomment">///</span>
-<span class="doccomment">/// In addition, if you have renamed the `enumset` crate in your crate, you can use the</span>
-<span class="doccomment">/// `#[enumset(crate_name = &quot;enumset2&quot;)]` attribute to tell the custom derive to use that name</span>
-<span class="doccomment">/// instead.</span>
+<span class="doccomment">/// # Options</span>
 <span class="doccomment">///</span>
-<span class="doccomment">/// Attributes controlling the serialization of an `EnumSet` are documented in</span>
-<span class="doccomment">/// [its documentation](./struct.EnumSet.html#serialization).</span>
+<span class="doccomment">/// Options are given with `#[enumset(foo)]` annotations attached to the same enum as the derive.</span>
+<span class="doccomment">/// Multiple options may be given in the same annotation using the `#[enumset(foo, bar)]` syntax.</span>
+<span class="doccomment">///</span>
+<span class="doccomment">/// A full list of options is as follows:</span>
+<span class="doccomment">///</span>
+<span class="doccomment">/// * `#[enumset(no_super_impls)]` prevents the derive from creating implementations required for</span>
+<span class="doccomment">///   [`EnumSet`] to function. When this attribute is specified, implementations of [`Copy`],</span>
+<span class="doccomment">///   [`Clone`], [`Eq`], and [`PartialEq`]. This can be useful if you are using a code generator</span>
+<span class="doccomment">///   that already derives these traits. These impls should function identically to the</span>
+<span class="doccomment">///   automatically derived versions, or unintentional behavior may be a result.</span>
+<span class="doccomment">/// * `#[enumset(no_ops)` prevents the derive from implementing any operator traits.</span>
+<span class="doccomment">/// * `#[enumset(crate_name = &quot;enumset2&quot;)]` may be used to change the name of the `enumset` crate</span>
+<span class="doccomment">///   used in the generated code. When the `std` feature is enabled, enumset parses `Cargo.toml`</span>
+<span class="doccomment">///   to determine the name of the crate, and this flag is unnecessary.</span>
+<span class="doccomment">/// * `#[enumset(repr = &quot;u8&quot;)]` may be used to specify the in-memory representation of `EnumSet`s</span>
+<span class="doccomment">///   of this enum type. The effects of this are described in [the `EnumSet` documentation under</span>
+<span class="doccomment">///   “FFI, Safety and `repr`”][EnumSet#ffi-safety-and-repr]. Allowed types are `u8`, `u16`, `u32`,</span>
+<span class="doccomment">///   `u64` and `u128`. If this is not used, then the derive macro will choose a type to best fit</span>
+<span class="doccomment">///   the enum, but there are no guarantees about which type will be chosen.</span>
+<span class="doccomment">///</span>
+<span class="doccomment">/// When the `serde` feature is used, the following features may also be specified. These options</span>
+<span class="doccomment">/// may be used (with no effect) when building without the feature enabled:</span>
+<span class="doccomment">///</span>
+<span class="doccomment">/// * `#[enumset(serialize_repr = &quot;u8&quot;)]` may be used to specify the integer type used to serialize</span>
+<span class="doccomment">///   the underlying bitset. Any type allowed in the `repr` option may be used in this option.</span>
+<span class="doccomment">/// * `#[enumset(serialize_as_list)]` may be used to serialize the bitset as a list of enum</span>
+<span class="doccomment">///   variants instead of an integer. This requires [`Deserialize`] and [`Serialize`] be</span>
+<span class="doccomment">///   implemented on the enum.</span>
+<span class="doccomment">/// * `#[enumset(serialize_deny_unknown)]` causes the generated deserializer to return an error</span>
+<span class="doccomment">///   for unknown bits instead of silently ignoring them.</span>
 <span class="doccomment">///</span>
 <span class="doccomment">/// # Examples</span>
 <span class="doccomment">///</span>
@@ -923,13 +1195,51 @@
 <span class="doccomment">///    A, B, C, D, E, F, G,</span>
 <span class="doccomment">/// }</span>
 <span class="doccomment">/// ```</span>
-<span class="kw">pub</span> <span class="kw">unsafe</span> <span class="kw">trait</span> <span class="ident">EnumSetType</span>: <span class="ident">Copy</span> <span class="op">+</span> <span class="ident">Eq</span> <span class="op">+</span> <span class="ident">EnumSetTypePrivate</span> { }
+<span class="kw">pub</span> <span class="kw">use</span> <span class="ident">enumset_derive::EnumSetType</span>;
+
+<span class="doccomment">/// The trait used to define enum types that may be used with [`EnumSet`].</span>
+<span class="doccomment">///</span>
+<span class="doccomment">/// This trait must be impelmented using `#[derive(EnumSetType)]`, is not public API, and its</span>
+<span class="doccomment">/// internal structure may change at any time with no warning.</span>
+<span class="doccomment">///</span>
+<span class="doccomment">/// For full documentation on the procedural derive and its options, see</span>
+<span class="doccomment">/// [`#[derive(EnumSetType)]`](./derive.EnumSetType.html).</span>
+<span class="kw">pub</span> <span class="kw">unsafe</span> <span class="kw">trait</span> <span class="ident">EnumSetType</span>: <span class="ident">Copy</span> <span class="op">+</span> <span class="ident">Eq</span> <span class="op">+</span> <span class="ident">EnumSetTypePrivate</span> {}
+
+<span class="doccomment">/// An [`EnumSetType`] for which [`EnumSet`]s have a guaranteed in-memory representation.</span>
+<span class="doccomment">///</span>
+<span class="doccomment">/// An implementation of this trait is generated by using</span>
+<span class="doccomment">/// [`#[derive(EnumSetType)]`](./derive.EnumSetType.html) with the annotation</span>
+<span class="doccomment">/// `#[enumset(repr = &quot;…&quot;)]`, where `…` is `u8`, `u16`, `u32`, `u64` or `u128`.</span>
+<span class="doccomment">///</span>
+<span class="doccomment">/// For any type `T` that implements this trait, the in-memory representation of `EnumSet&lt;T&gt;`</span>
+<span class="doccomment">/// is guaranteed to be `Repr`. This guarantee is useful for FFI. See [the `EnumSet` documentation</span>
+<span class="doccomment">/// under “FFI, Safety and `repr`”][EnumSet#ffi-safety-and-repr] for an example.</span>
+<span class="kw">pub</span> <span class="kw">unsafe</span> <span class="kw">trait</span> <span class="ident">EnumSetTypeWithRepr</span>:
+    <span class="ident">EnumSetType</span> <span class="op">+</span> <span class="ident">EnumSetTypePrivate</span><span class="op">&lt;</span><span class="ident">Repr</span> <span class="op">=</span> <span class="op">&lt;</span><span class="self">Self</span> <span class="kw">as</span> <span class="ident">EnumSetTypeWithRepr</span><span class="op">&gt;</span><span class="ident">::Repr</span><span class="op">&gt;</span>
+{
+    <span class="doccomment">/// The guaranteed representation.</span>
+    <span class="kw">type</span> <span class="ident">Repr</span>: <span class="ident">EnumSetTypeRepr</span>;
+}
 
 <span class="doccomment">/// An efficient set type for enums.</span>
 <span class="doccomment">///</span>
 <span class="doccomment">/// It is implemented using a bitset stored using the smallest integer that can fit all bits</span>
-<span class="doccomment">/// in the underlying enum. In general, an enum variant with a numeric value of `n` is stored in</span>
+<span class="doccomment">/// in the underlying enum. In general, an enum variant with a discriminator of `n` is stored in</span>
 <span class="doccomment">/// the nth least significant bit (corresponding with a mask of, e.g. `1 &lt;&lt; enum as u32`).</span>
+<span class="doccomment">///</span>
+<span class="doccomment">/// # Numeric representation</span>
+<span class="doccomment">///</span>
+<span class="doccomment">/// `EnumSet` is internally implemented using integer types, and as such can be easily converted</span>
+<span class="doccomment">/// from and to numbers.</span>
+<span class="doccomment">///</span>
+<span class="doccomment">/// Each bit of the underlying integer corresponds to at most one particular enum variant. If the</span>
+<span class="doccomment">/// corresponding bit for a variant is set, it present in the set. Bits that do not correspond to</span>
+<span class="doccomment">/// any variant are always unset.</span>
+<span class="doccomment">///</span>
+<span class="doccomment">/// By default, each enum variant is stored in a bit corresponding to its discriminator. An enum</span>
+<span class="doccomment">/// variant with a discriminator of `n` is stored in the `n + 1`th least significant bit</span>
+<span class="doccomment">/// (corresponding to a mask of e.g. `1 &lt;&lt; enum as u32`).</span>
 <span class="doccomment">///</span>
 <span class="doccomment">/// # Serialization</span>
 <span class="doccomment">///</span>
@@ -944,22 +1254,66 @@
 <span class="doccomment">/// for serialization. This can be important for avoiding unintentional breaking changes when</span>
 <span class="doccomment">/// `EnumSet`s are serialized with formats like `bincode`.</span>
 <span class="doccomment">///</span>
-<span class="doccomment">/// By default, unknown bits are ignored and silently removed from the bitset. To override this</span>
+<span class="doccomment">/// By default, unknown bits are ignored and silently removed from the bitset. To override thris</span>
 <span class="doccomment">/// behavior, you can add a `#[enumset(serialize_deny_unknown)]` attribute. This will cause</span>
 <span class="doccomment">/// deserialization to fail if an invalid bit is set.</span>
 <span class="doccomment">///</span>
 <span class="doccomment">/// In addition, the `#[enumset(serialize_as_list)]` attribute causes the `EnumSet` to be</span>
 <span class="doccomment">/// instead serialized as a list of enum variants. This requires your enum type implement</span>
-<span class="doccomment">/// [`Serialize`] and [`Deserialize`]. Note that this is a breaking change</span>
+<span class="doccomment">/// [`Serialize`] and [`Deserialize`]. Note that this is a breaking change.</span>
+<span class="doccomment">///</span>
+<span class="doccomment">/// # FFI, Safety and `repr`</span>
+<span class="doccomment">///</span>
+<span class="doccomment">/// If an enum type `T` is annotated with [`#[enumset(repr = &quot;R&quot;)]`][derive@EnumSetType#options],</span>
+<span class="doccomment">/// then several things happen:</span>
+<span class="doccomment">///</span>
+<span class="doccomment">/// * `T` will implement &lt;code&gt;[EnumSetTypeWithRepr]&amp;lt;Repr = R&amp;gt;&lt;/code&gt; in addition to</span>
+<span class="doccomment">///   [`EnumSetType`].</span>
+<span class="doccomment">/// * The `EnumSet` methods with `repr` in their name, such as [`as_repr`][EnumSet::as_repr] and</span>
+<span class="doccomment">///   [`from_repr`][EnumSet::from_repr], will be available for `EnumSet&lt;T&gt;`.</span>
+<span class="doccomment">/// * The in-memory representation of `EnumSet&lt;T&gt;` is guaranteed to be `R`.</span>
+<span class="doccomment">///</span>
+<span class="doccomment">/// That last guarantee makes it sound to send `EnumSet&lt;T&gt;` across an FFI boundary. For example:</span>
+<span class="doccomment">///</span>
+<span class="doccomment">/// ```</span>
+<span class="doccomment">/// # use enumset::*;</span>
+<span class="doccomment">/// #</span>
+<span class="doccomment">/// # mod ffi_impl {</span>
+<span class="doccomment">/// #     // This example “foreign” function is actually written in Rust, but for the sake</span>
+<span class="doccomment">/// #     // of example, we&#39;ll pretend it&#39;s written in C.</span>
+<span class="doccomment">/// #     #[no_mangle]</span>
+<span class="doccomment">/// #     extern &quot;C&quot; fn some_foreign_function(set: u32) -&gt; u32 {</span>
+<span class="doccomment">/// #         set &amp; 0b100</span>
+<span class="doccomment">/// #     }</span>
+<span class="doccomment">/// # }</span>
+<span class="doccomment">/// #</span>
+<span class="doccomment">/// extern &quot;C&quot; {</span>
+<span class="doccomment">///     // This function is written in C like:</span>
+<span class="doccomment">///     // uint32_t some_foreign_function(uint32_t set) { … }</span>
+<span class="doccomment">///     fn some_foreign_function(set: EnumSet&lt;MyEnum&gt;) -&gt; EnumSet&lt;MyEnum&gt;;</span>
+<span class="doccomment">/// }</span>
+<span class="doccomment">///</span>
+<span class="doccomment">/// #[derive(Debug, EnumSetType)]</span>
+<span class="doccomment">/// #[enumset(repr = &quot;u32&quot;)]</span>
+<span class="doccomment">/// enum MyEnum { A, B, C }</span>
+<span class="doccomment">///</span>
+<span class="doccomment">/// let set: EnumSet&lt;MyEnum&gt; = enum_set!(MyEnum::A | MyEnum::C);</span>
+<span class="doccomment">///</span>
+<span class="doccomment">/// let new_set: EnumSet&lt;MyEnum&gt; = unsafe { some_foreign_function(set) };</span>
+<span class="doccomment">/// assert_eq!(new_set, enum_set!(MyEnum::C));</span>
+<span class="doccomment">/// ```</span>
+<span class="doccomment">///</span>
+<span class="doccomment">/// When an `EnumSet&lt;T&gt;` is received via FFI, all bits that don&#39;t correspond to an enum variant</span>
+<span class="doccomment">/// of `T` must be set to `0`. Behavior is **undefined** if any of these bits are set to `1`.</span>
 <span class="attribute">#[<span class="ident">derive</span>(<span class="ident">Copy</span>, <span class="ident">Clone</span>, <span class="ident">PartialEq</span>, <span class="ident">Eq</span>)]</span>
 <span class="attribute">#[<span class="ident">repr</span>(<span class="ident">transparent</span>)]</span>
 <span class="kw">pub</span> <span class="kw">struct</span> <span class="ident">EnumSet</span><span class="op">&lt;</span><span class="ident">T</span>: <span class="ident">EnumSetType</span><span class="op">&gt;</span> {
     <span class="attribute">#[<span class="ident">doc</span>(<span class="ident">hidden</span>)]</span>
     <span class="doccomment">/// This is public due to the [`enum_set!`] macro.</span>
     <span class="doccomment">/// This is **NOT** public API and may change at any time.</span>
-    <span class="kw">pub</span> <span class="ident">__priv_repr</span>: <span class="ident">T::Repr</span>
+    <span class="kw">pub</span> <span class="ident">__priv_repr</span>: <span class="ident">T::Repr</span>,
 }
-<span class="kw">impl</span> <span class="op">&lt;</span><span class="ident">T</span>: <span class="ident">EnumSetType</span><span class="op">&gt;</span> <span class="ident">EnumSet</span><span class="op">&lt;</span><span class="ident">T</span><span class="op">&gt;</span> {
+<span class="kw">impl</span><span class="op">&lt;</span><span class="ident">T</span>: <span class="ident">EnumSetType</span><span class="op">&gt;</span> <span class="ident">EnumSet</span><span class="op">&lt;</span><span class="ident">T</span><span class="op">&gt;</span> {
     <span class="comment">// Returns all bits valid for the enum</span>
     <span class="attribute">#[<span class="ident">inline</span>(<span class="ident">always</span>)]</span>
     <span class="kw">fn</span> <span class="ident">all_bits</span>() -&gt; <span class="ident">T::Repr</span> {
@@ -1111,12 +1465,87 @@
         <span class="self">self</span>.<span class="ident">__priv_repr</span> <span class="op">=</span> <span class="self">self</span>.<span class="ident">__priv_repr</span>.<span class="ident">and_not</span>(<span class="ident">other</span>.<span class="ident">__priv_repr</span>);
     }
 
-    <span class="doccomment">/// Creates an iterator over the values in this set.</span>
+    <span class="doccomment">/// Iterates the contents of the set in order from the least significant bit to the most</span>
+    <span class="doccomment">/// significant bit.</span>
     <span class="doccomment">///</span>
     <span class="doccomment">/// Note that iterator invalidation is impossible as the iterator contains a copy of this type,</span>
     <span class="doccomment">/// rather than holding a reference to it.</span>
     <span class="kw">pub</span> <span class="kw">fn</span> <span class="ident">iter</span>(<span class="kw-2">&amp;</span><span class="self">self</span>) -&gt; <span class="ident">EnumSetIter</span><span class="op">&lt;</span><span class="ident">T</span><span class="op">&gt;</span> {
         <span class="ident">EnumSetIter::new</span>(<span class="kw-2">*</span><span class="self">self</span>)
+    }
+
+    <span class="doccomment">/// Returns a `T::Repr` representing the elements of this set.</span>
+    <span class="doccomment">///</span>
+    <span class="doccomment">/// Unlike the other `as_*` methods, this method is zero-cost and guaranteed not to fail,</span>
+    <span class="doccomment">/// panic or truncate any bits.</span>
+    <span class="doccomment">///</span>
+    <span class="doccomment">/// In order to use this method, the definition of `T` must have the `#[enumset(repr = &quot;…&quot;)]`</span>
+    <span class="doccomment">/// annotation.</span>
+    <span class="attribute">#[<span class="ident">inline</span>(<span class="ident">always</span>)]</span>
+    <span class="kw">pub</span> <span class="kw">fn</span> <span class="ident">as_repr</span>(<span class="kw-2">&amp;</span><span class="self">self</span>) -&gt; <span class="op">&lt;</span><span class="ident">T</span> <span class="kw">as</span> <span class="ident">EnumSetTypeWithRepr</span><span class="op">&gt;</span><span class="ident">::Repr</span>
+    <span class="kw">where</span> <span class="ident">T</span>: <span class="ident">EnumSetTypeWithRepr</span> {
+        <span class="self">self</span>.<span class="ident">__priv_repr</span>
+    }
+
+    <span class="doccomment">/// Constructs a bitset from a `T::Repr` without checking for invalid bits.</span>
+    <span class="doccomment">///</span>
+    <span class="doccomment">/// Unlike the other `from_*` methods, this method is zero-cost and guaranteed not to fail,</span>
+    <span class="doccomment">/// panic or truncate any bits, provided the conditions under “Safety” are upheld.</span>
+    <span class="doccomment">///</span>
+    <span class="doccomment">/// In order to use this method, the definition of `T` must have the `#[enumset(repr = &quot;…&quot;)]`</span>
+    <span class="doccomment">/// annotation.</span>
+    <span class="doccomment">///</span>
+    <span class="doccomment">/// # Safety</span>
+    <span class="doccomment">///</span>
+    <span class="doccomment">/// All bits in the provided parameter `bits` that don&#39;t correspond to an enum variant of</span>
+    <span class="doccomment">/// `T` must be set to `0`. Behavior is **undefined** if any of these bits are set to `1`.</span>
+    <span class="attribute">#[<span class="ident">inline</span>(<span class="ident">always</span>)]</span>
+    <span class="kw">pub</span> <span class="kw">unsafe</span> <span class="kw">fn</span> <span class="ident">from_repr_unchecked</span>(<span class="ident">bits</span>: <span class="op">&lt;</span><span class="ident">T</span> <span class="kw">as</span> <span class="ident">EnumSetTypeWithRepr</span><span class="op">&gt;</span><span class="ident">::Repr</span>) -&gt; <span class="self">Self</span>
+    <span class="kw">where</span> <span class="ident">T</span>: <span class="ident">EnumSetTypeWithRepr</span> {
+        <span class="self">Self</span> { <span class="ident">__priv_repr</span>: <span class="ident">bits</span> }
+    }
+
+    <span class="doccomment">/// Constructs a bitset from a `T::Repr`.</span>
+    <span class="doccomment">///</span>
+    <span class="doccomment">/// If a bit that doesn&#39;t correspond to an enum variant is set, this</span>
+    <span class="doccomment">/// method will panic.</span>
+    <span class="doccomment">///</span>
+    <span class="doccomment">/// In order to use this method, the definition of `T` must have the `#[enumset(repr = &quot;…&quot;)]`</span>
+    <span class="doccomment">/// annotation.</span>
+    <span class="attribute">#[<span class="ident">inline</span>(<span class="ident">always</span>)]</span>
+    <span class="kw">pub</span> <span class="kw">fn</span> <span class="ident">from_repr</span>(<span class="ident">bits</span>: <span class="op">&lt;</span><span class="ident">T</span> <span class="kw">as</span> <span class="ident">EnumSetTypeWithRepr</span><span class="op">&gt;</span><span class="ident">::Repr</span>) -&gt; <span class="self">Self</span>
+    <span class="kw">where</span> <span class="ident">T</span>: <span class="ident">EnumSetTypeWithRepr</span> {
+        <span class="ident"><span class="self">Self</span>::try_from_repr</span>(<span class="ident">bits</span>).<span class="ident">expect</span>(<span class="string">&quot;Bitset contains invalid variants.&quot;</span>)
+    }
+
+    <span class="doccomment">/// Attempts to constructs a bitset from a `T::Repr`.</span>
+    <span class="doccomment">///</span>
+    <span class="doccomment">/// If a bit that doesn&#39;t correspond to an enum variant is set, this</span>
+    <span class="doccomment">/// method will return `None`.</span>
+    <span class="doccomment">///</span>
+    <span class="doccomment">/// In order to use this method, the definition of `T` must have the `#[enumset(repr = &quot;…&quot;)]`</span>
+    <span class="doccomment">/// annotation.</span>
+    <span class="attribute">#[<span class="ident">inline</span>(<span class="ident">always</span>)]</span>
+    <span class="kw">pub</span> <span class="kw">fn</span> <span class="ident">try_from_repr</span>(<span class="ident">bits</span>: <span class="op">&lt;</span><span class="ident">T</span> <span class="kw">as</span> <span class="ident">EnumSetTypeWithRepr</span><span class="op">&gt;</span><span class="ident">::Repr</span>) -&gt; <span class="prelude-ty">Option</span><span class="op">&lt;</span><span class="self">Self</span><span class="op">&gt;</span>
+    <span class="kw">where</span> <span class="ident">T</span>: <span class="ident">EnumSetTypeWithRepr</span> {
+        <span class="kw">let</span> <span class="ident">mask</span> <span class="op">=</span> <span class="ident"><span class="self">Self</span>::all</span>().<span class="ident">__priv_repr</span>;
+        <span class="kw">if</span> <span class="ident">bits</span>.<span class="ident">and_not</span>(<span class="ident">mask</span>).<span class="ident">is_empty</span>() {
+            <span class="prelude-val">Some</span>(<span class="ident">EnumSet</span> { <span class="ident">__priv_repr</span>: <span class="ident">bits</span> })
+        } <span class="kw">else</span> {
+            <span class="prelude-val">None</span>
+        }
+    }
+
+    <span class="doccomment">/// Constructs a bitset from a `T::Repr`, ignoring invalid variants.</span>
+    <span class="doccomment">///</span>
+    <span class="doccomment">/// In order to use this method, the definition of `T` must have the `#[enumset(repr = &quot;…&quot;)]`</span>
+    <span class="doccomment">/// annotation.</span>
+    <span class="attribute">#[<span class="ident">inline</span>(<span class="ident">always</span>)]</span>
+    <span class="kw">pub</span> <span class="kw">fn</span> <span class="ident">from_repr_truncated</span>(<span class="ident">bits</span>: <span class="op">&lt;</span><span class="ident">T</span> <span class="kw">as</span> <span class="ident">EnumSetTypeWithRepr</span><span class="op">&gt;</span><span class="ident">::Repr</span>) -&gt; <span class="self">Self</span>
+    <span class="kw">where</span> <span class="ident">T</span>: <span class="ident">EnumSetTypeWithRepr</span> {
+        <span class="kw">let</span> <span class="ident">mask</span> <span class="op">=</span> <span class="ident"><span class="self">Self</span>::all</span>().<span class="ident">as_repr</span>();
+        <span class="kw">let</span> <span class="ident">bits</span> <span class="op">=</span> <span class="ident">bits</span> <span class="op">&amp;</span> <span class="ident">mask</span>;
+        <span class="ident">EnumSet</span> { <span class="ident">__priv_repr</span>: <span class="ident">bits</span> }
     }
 }
 
@@ -1126,7 +1555,7 @@
         $(<span class="macro">for_num!</span>(
             <span class="macro-nonterminal">$</span><span class="macro-nonterminal">underlying</span>:<span class="ident">ty</span>, <span class="macro-nonterminal">$</span><span class="macro-nonterminal">underlying_str</span>:<span class="ident">expr</span>,
             <span class="macro-nonterminal">$</span><span class="macro-nonterminal">from_fn</span>:<span class="ident">ident</span> <span class="macro-nonterminal">$</span><span class="macro-nonterminal">to_fn</span>:<span class="ident">ident</span> <span class="macro-nonterminal">$</span><span class="macro-nonterminal">from_fn_opt</span>:<span class="ident">ident</span> <span class="macro-nonterminal">$</span><span class="macro-nonterminal">to_fn_opt</span>:<span class="ident">ident</span>,
-            <span class="macro-nonterminal">$</span><span class="macro-nonterminal">from</span>:<span class="ident">ident</span> <span class="macro-nonterminal">$</span><span class="macro-nonterminal">try_from</span>:<span class="ident">ident</span> <span class="macro-nonterminal">$</span><span class="macro-nonterminal">from_truncated</span>:<span class="ident">ident</span>
+            <span class="macro-nonterminal">$</span><span class="macro-nonterminal">from</span>:<span class="ident">ident</span> <span class="macro-nonterminal">$</span><span class="macro-nonterminal">try_from</span>:<span class="ident">ident</span> <span class="macro-nonterminal">$</span><span class="macro-nonterminal">from_truncated</span>:<span class="ident">ident</span> <span class="macro-nonterminal">$</span><span class="macro-nonterminal">from_unchecked</span>:<span class="ident">ident</span>,
             <span class="macro-nonterminal">$</span><span class="macro-nonterminal">to</span>:<span class="ident">ident</span> <span class="macro-nonterminal">$</span><span class="macro-nonterminal">try_to</span>:<span class="ident">ident</span> <span class="macro-nonterminal">$</span><span class="macro-nonterminal">to_truncated</span>:<span class="ident">ident</span>
         );)<span class="op">*</span>
     ) =&gt; {
@@ -1136,7 +1565,8 @@
             <span class="attribute">#[<span class="ident">doc</span> <span class="op">=</span> <span class="string">&quot;` representing the elements of this set.\n\nIf the underlying bitset will \
                      not fit in a `&quot;</span>]</span>
             <span class="attribute">#[<span class="ident">doc</span> <span class="op">=</span> <span class="macro-nonterminal">$</span><span class="macro-nonterminal">underlying_str</span>]</span>
-            <span class="attribute">#[<span class="ident">doc</span> <span class="op">=</span> <span class="string">&quot;`, this method will panic.&quot;</span>]</span>
+            <span class="attribute">#[<span class="ident">doc</span> <span class="op">=</span> <span class="string">&quot;` or contains bits that do not correspond to an enum variant, this method \
+                     will panic.&quot;</span>]</span>
             <span class="attribute">#[<span class="ident">inline</span>(<span class="ident">always</span>)]</span>
             <span class="kw">pub</span> <span class="kw">fn</span> <span class="macro-nonterminal">$</span><span class="macro-nonterminal">to</span>(<span class="kw-2">&amp;</span><span class="self">self</span>) -&gt; <span class="macro-nonterminal">$</span><span class="macro-nonterminal">underlying</span> {
                 <span class="self">self</span>.<span class="macro-nonterminal">$</span><span class="macro-nonterminal">try_to</span>().<span class="ident">expect</span>(<span class="string">&quot;Bitset will not fit into this type.&quot;</span>)
@@ -1147,7 +1577,8 @@
             <span class="attribute">#[<span class="ident">doc</span> <span class="op">=</span> <span class="string">&quot;` representing the elements of this set.\n\nIf the underlying bitset will \
                      not fit in a `&quot;</span>]</span>
             <span class="attribute">#[<span class="ident">doc</span> <span class="op">=</span> <span class="macro-nonterminal">$</span><span class="macro-nonterminal">underlying_str</span>]</span>
-            <span class="attribute">#[<span class="ident">doc</span> <span class="op">=</span> <span class="string">&quot;`, this method will instead return `None`.&quot;</span>]</span>
+            <span class="attribute">#[<span class="ident">doc</span> <span class="op">=</span> <span class="string">&quot;` or contains bits that do not correspond to an enum variant, this method \
+                     will instead return `None`.&quot;</span>]</span>
             <span class="attribute">#[<span class="ident">inline</span>(<span class="ident">always</span>)]</span>
             <span class="kw">pub</span> <span class="kw">fn</span> <span class="macro-nonterminal">$</span><span class="macro-nonterminal">try_to</span>(<span class="kw-2">&amp;</span><span class="self">self</span>) -&gt; <span class="prelude-ty">Option</span><span class="op">&lt;</span><span class="macro-nonterminal">$</span><span class="macro-nonterminal">underlying</span><span class="op">&gt;</span> {
                 <span class="ident">EnumSetTypeRepr</span>::<span class="macro-nonterminal">$</span><span class="macro-nonterminal">to_fn_opt</span>(<span class="kw-2">&amp;</span><span class="self">self</span>.<span class="ident">__priv_repr</span>)
@@ -1158,7 +1589,8 @@
             <span class="attribute">#[<span class="ident">doc</span> <span class="op">=</span> <span class="string">&quot;` representing the elements of this set.\n\nIf the underlying bitset will \
                      not fit in a `&quot;</span>]</span>
             <span class="attribute">#[<span class="ident">doc</span> <span class="op">=</span> <span class="macro-nonterminal">$</span><span class="macro-nonterminal">underlying_str</span>]</span>
-            <span class="attribute">#[<span class="ident">doc</span> <span class="op">=</span> <span class="string">&quot;`, this method will truncate any bits that don&#39;t fit.&quot;</span>]</span>
+            <span class="attribute">#[<span class="ident">doc</span> <span class="op">=</span> <span class="string">&quot;`, this method will truncate any bits that don&#39;t fit or do not correspond \
+                     to an enum variant.&quot;</span>]</span>
             <span class="attribute">#[<span class="ident">inline</span>(<span class="ident">always</span>)]</span>
             <span class="kw">pub</span> <span class="kw">fn</span> <span class="macro-nonterminal">$</span><span class="macro-nonterminal">to_truncated</span>(<span class="kw-2">&amp;</span><span class="self">self</span>) -&gt; <span class="macro-nonterminal">$</span><span class="macro-nonterminal">underlying</span> {
                 <span class="ident">EnumSetTypeRepr</span>::<span class="macro-nonterminal">$</span><span class="macro-nonterminal">to_fn</span>(<span class="kw-2">&amp;</span><span class="self">self</span>.<span class="ident">__priv_repr</span>)
@@ -1197,33 +1629,58 @@
                 <span class="kw">let</span> <span class="ident">bits</span> <span class="op">=</span> <span class="op">&lt;</span><span class="ident">T::Repr</span> <span class="kw">as</span> <span class="ident">EnumSetTypeRepr</span><span class="op">&gt;</span>::<span class="macro-nonterminal">$</span><span class="macro-nonterminal">from_fn</span>(<span class="ident">bits</span> <span class="op">&amp;</span> <span class="ident">mask</span>);
                 <span class="ident">EnumSet</span> { <span class="ident">__priv_repr</span>: <span class="ident">bits</span> }
             }
+
+            <span class="attribute">#[<span class="ident">doc</span> <span class="op">=</span> <span class="string">&quot;Constructs a bitset from a `&quot;</span>]</span>
+            <span class="attribute">#[<span class="ident">doc</span> <span class="op">=</span> <span class="macro-nonterminal">$</span><span class="macro-nonterminal">underlying_str</span>]</span>
+            <span class="attribute">#[<span class="ident">doc</span> <span class="op">=</span> <span class="string">&quot;`, without checking for invalid bits.&quot;</span>]</span>
+            <span class="doccomment">///</span>
+            <span class="doccomment">/// # Safety</span>
+            <span class="doccomment">///</span>
+            <span class="doccomment">/// All bits in the provided parameter `bits` that don&#39;t correspond to an enum variant</span>
+            <span class="doccomment">/// of `T` must be set to `0`. Behavior is **undefined** if any of these bits are set</span>
+            <span class="doccomment">/// to `1`.</span>
+            <span class="attribute">#[<span class="ident">inline</span>(<span class="ident">always</span>)]</span>
+            <span class="kw">pub</span> <span class="kw">unsafe</span> <span class="kw">fn</span> <span class="macro-nonterminal">$</span><span class="macro-nonterminal">from_unchecked</span>(<span class="ident">bits</span>: <span class="macro-nonterminal">$</span><span class="macro-nonterminal">underlying</span>) -&gt; <span class="self">Self</span> {
+                <span class="ident">EnumSet</span> { <span class="ident">__priv_repr</span>: <span class="op">&lt;</span><span class="ident">T::Repr</span> <span class="kw">as</span> <span class="ident">EnumSetTypeRepr</span><span class="op">&gt;</span>::<span class="macro-nonterminal">$</span><span class="macro-nonterminal">from_fn</span>(<span class="ident">bits</span>) }
+            }
         )<span class="kw-2">*</span>}
     }
 }
 <span class="macro">conversion_impls!</span> {
-    <span class="macro">for_num!</span>(<span class="ident">u8</span>, <span class="string">&quot;u8&quot;</span>, <span class="ident">from_u8</span> <span class="ident">to_u8</span> <span class="ident">from_u8_opt</span> <span class="ident">to_u8_opt</span>,
-             <span class="ident">from_u8</span> <span class="ident">try_from_u8</span> <span class="ident">from_u8_truncated</span> <span class="ident">as_u8</span> <span class="ident">try_as_u8</span> <span class="ident">as_u8_truncated</span>);
-    <span class="macro">for_num!</span>(<span class="ident">u16</span>, <span class="string">&quot;u16&quot;</span>, <span class="ident">from_u16</span> <span class="ident">to_u16</span> <span class="ident">from_u16_opt</span> <span class="ident">to_u16_opt</span>,
-             <span class="ident">from_u16</span> <span class="ident">try_from_u16</span> <span class="ident">from_u16_truncated</span> <span class="ident">as_u16</span> <span class="ident">try_as_u16</span> <span class="ident">as_u16_truncated</span>);
-    <span class="macro">for_num!</span>(<span class="ident">u32</span>, <span class="string">&quot;u32&quot;</span>, <span class="ident">from_u32</span> <span class="ident">to_u32</span> <span class="ident">from_u32_opt</span> <span class="ident">to_u32_opt</span>,
-             <span class="ident">from_u32</span> <span class="ident">try_from_u32</span> <span class="ident">from_u32_truncated</span> <span class="ident">as_u32</span> <span class="ident">try_as_u32</span> <span class="ident">as_u32_truncated</span>);
-    <span class="macro">for_num!</span>(<span class="ident">u64</span>, <span class="string">&quot;u64&quot;</span>, <span class="ident">from_u64</span> <span class="ident">to_u64</span> <span class="ident">from_u64_opt</span> <span class="ident">to_u64_opt</span>,
-             <span class="ident">from_u64</span> <span class="ident">try_from_u64</span> <span class="ident">from_u64_truncated</span> <span class="ident">as_u64</span> <span class="ident">try_as_u64</span> <span class="ident">as_u64_truncated</span>);
-    <span class="macro">for_num!</span>(<span class="ident">u128</span>, <span class="string">&quot;u128&quot;</span>, <span class="ident">from_u128</span> <span class="ident">to_u128</span> <span class="ident">from_u128_opt</span> <span class="ident">to_u128_opt</span>,
-             <span class="ident">from_u128</span> <span class="ident">try_from_u128</span> <span class="ident">from_u128_truncated</span> <span class="ident">as_u128</span> <span class="ident">try_as_u128</span> <span class="ident">as_u128_truncated</span>);
-    <span class="macro">for_num!</span>(<span class="ident">usize</span>, <span class="string">&quot;usize&quot;</span>, <span class="ident">from_usize</span> <span class="ident">to_usize</span> <span class="ident">from_usize_opt</span> <span class="ident">to_usize_opt</span>,
-             <span class="ident">from_usize</span> <span class="ident">try_from_usize</span> <span class="ident">from_usize_truncated</span>
+    <span class="macro">for_num!</span>(<span class="ident">u8</span>, <span class="string">&quot;u8&quot;</span>,
+             <span class="ident">from_u8</span> <span class="ident">to_u8</span> <span class="ident">from_u8_opt</span> <span class="ident">to_u8_opt</span>,
+             <span class="ident">from_u8</span> <span class="ident">try_from_u8</span> <span class="ident">from_u8_truncated</span> <span class="ident">from_u8_unchecked</span>,
+             <span class="ident">as_u8</span> <span class="ident">try_as_u8</span> <span class="ident">as_u8_truncated</span>);
+    <span class="macro">for_num!</span>(<span class="ident">u16</span>, <span class="string">&quot;u16&quot;</span>,
+             <span class="ident">from_u16</span> <span class="ident">to_u16</span> <span class="ident">from_u16_opt</span> <span class="ident">to_u16_opt</span>,
+             <span class="ident">from_u16</span> <span class="ident">try_from_u16</span> <span class="ident">from_u16_truncated</span> <span class="ident">from_u16_unchecked</span>,
+             <span class="ident">as_u16</span> <span class="ident">try_as_u16</span> <span class="ident">as_u16_truncated</span>);
+    <span class="macro">for_num!</span>(<span class="ident">u32</span>, <span class="string">&quot;u32&quot;</span>,
+             <span class="ident">from_u32</span> <span class="ident">to_u32</span> <span class="ident">from_u32_opt</span> <span class="ident">to_u32_opt</span>,
+             <span class="ident">from_u32</span> <span class="ident">try_from_u32</span> <span class="ident">from_u32_truncated</span> <span class="ident">from_u32_unchecked</span>,
+             <span class="ident">as_u32</span> <span class="ident">try_as_u32</span> <span class="ident">as_u32_truncated</span>);
+    <span class="macro">for_num!</span>(<span class="ident">u64</span>, <span class="string">&quot;u64&quot;</span>,
+             <span class="ident">from_u64</span> <span class="ident">to_u64</span> <span class="ident">from_u64_opt</span> <span class="ident">to_u64_opt</span>,
+             <span class="ident">from_u64</span> <span class="ident">try_from_u64</span> <span class="ident">from_u64_truncated</span> <span class="ident">from_u64_unchecked</span>,
+             <span class="ident">as_u64</span> <span class="ident">try_as_u64</span> <span class="ident">as_u64_truncated</span>);
+    <span class="macro">for_num!</span>(<span class="ident">u128</span>, <span class="string">&quot;u128&quot;</span>,
+             <span class="ident">from_u128</span> <span class="ident">to_u128</span> <span class="ident">from_u128_opt</span> <span class="ident">to_u128_opt</span>,
+             <span class="ident">from_u128</span> <span class="ident">try_from_u128</span> <span class="ident">from_u128_truncated</span> <span class="ident">from_u128_unchecked</span>,
+             <span class="ident">as_u128</span> <span class="ident">try_as_u128</span> <span class="ident">as_u128_truncated</span>);
+    <span class="macro">for_num!</span>(<span class="ident">usize</span>, <span class="string">&quot;usize&quot;</span>,
+             <span class="ident">from_usize</span> <span class="ident">to_usize</span> <span class="ident">from_usize_opt</span> <span class="ident">to_usize_opt</span>,
+             <span class="ident">from_usize</span> <span class="ident">try_from_usize</span> <span class="ident">from_usize_truncated</span> <span class="ident">from_usize_unchecked</span>,
              <span class="ident">as_usize</span> <span class="ident">try_as_usize</span> <span class="ident">as_usize_truncated</span>);
 }
 
-<span class="kw">impl</span> <span class="op">&lt;</span><span class="ident">T</span>: <span class="ident">EnumSetType</span><span class="op">&gt;</span> <span class="ident">Default</span> <span class="kw">for</span> <span class="ident">EnumSet</span><span class="op">&lt;</span><span class="ident">T</span><span class="op">&gt;</span> {
+<span class="kw">impl</span><span class="op">&lt;</span><span class="ident">T</span>: <span class="ident">EnumSetType</span><span class="op">&gt;</span> <span class="ident">Default</span> <span class="kw">for</span> <span class="ident">EnumSet</span><span class="op">&lt;</span><span class="ident">T</span><span class="op">&gt;</span> {
     <span class="doccomment">/// Returns an empty set.</span>
     <span class="kw">fn</span> <span class="ident">default</span>() -&gt; <span class="self">Self</span> {
         <span class="ident"><span class="self">Self</span>::new</span>()
     }
 }
 
-<span class="kw">impl</span> <span class="op">&lt;</span><span class="ident">T</span>: <span class="ident">EnumSetType</span><span class="op">&gt;</span> <span class="ident">IntoIterator</span> <span class="kw">for</span> <span class="ident">EnumSet</span><span class="op">&lt;</span><span class="ident">T</span><span class="op">&gt;</span> {
+<span class="kw">impl</span><span class="op">&lt;</span><span class="ident">T</span>: <span class="ident">EnumSetType</span><span class="op">&gt;</span> <span class="ident">IntoIterator</span> <span class="kw">for</span> <span class="ident">EnumSet</span><span class="op">&lt;</span><span class="ident">T</span><span class="op">&gt;</span> {
     <span class="kw">type</span> <span class="ident">Item</span> <span class="op">=</span> <span class="ident">T</span>;
     <span class="kw">type</span> <span class="ident">IntoIter</span> <span class="op">=</span> <span class="ident">EnumSetIter</span><span class="op">&lt;</span><span class="ident">T</span><span class="op">&gt;</span>;
 
@@ -1231,49 +1688,49 @@
         <span class="self">self</span>.<span class="ident">iter</span>()
     }
 }
-<span class="kw">impl</span> <span class="op">&lt;</span><span class="ident">T</span>: <span class="ident">EnumSetType</span><span class="op">&gt;</span> <span class="ident">Sum</span> <span class="kw">for</span> <span class="ident">EnumSet</span><span class="op">&lt;</span><span class="ident">T</span><span class="op">&gt;</span> {
-    <span class="kw">fn</span> <span class="ident">sum</span><span class="op">&lt;</span><span class="ident">I</span>: <span class="ident">Iterator</span><span class="op">&lt;</span><span class="ident">Item</span><span class="op">=</span><span class="self">Self</span><span class="op">&gt;</span><span class="op">&gt;</span>(<span class="ident">iter</span>: <span class="ident">I</span>) -&gt; <span class="self">Self</span> {
+<span class="kw">impl</span><span class="op">&lt;</span><span class="ident">T</span>: <span class="ident">EnumSetType</span><span class="op">&gt;</span> <span class="ident">Sum</span> <span class="kw">for</span> <span class="ident">EnumSet</span><span class="op">&lt;</span><span class="ident">T</span><span class="op">&gt;</span> {
+    <span class="kw">fn</span> <span class="ident">sum</span><span class="op">&lt;</span><span class="ident">I</span>: <span class="ident">Iterator</span><span class="op">&lt;</span><span class="ident">Item</span> <span class="op">=</span> <span class="self">Self</span><span class="op">&gt;</span><span class="op">&gt;</span>(<span class="ident">iter</span>: <span class="ident">I</span>) -&gt; <span class="self">Self</span> {
         <span class="ident">iter</span>.<span class="ident">fold</span>(<span class="ident">EnumSet::empty</span>(), <span class="op">|</span><span class="ident">a</span>, <span class="ident">v</span><span class="op">|</span> <span class="ident">a</span> <span class="op">|</span> <span class="ident">v</span>)
     }
 }
-<span class="kw">impl</span> <span class="op">&lt;</span><span class="lifetime">&#39;a</span>, <span class="ident">T</span>: <span class="ident">EnumSetType</span><span class="op">&gt;</span> <span class="ident">Sum</span><span class="op">&lt;</span><span class="kw-2">&amp;</span><span class="lifetime">&#39;a</span> <span class="ident">EnumSet</span><span class="op">&lt;</span><span class="ident">T</span><span class="op">&gt;</span><span class="op">&gt;</span> <span class="kw">for</span> <span class="ident">EnumSet</span><span class="op">&lt;</span><span class="ident">T</span><span class="op">&gt;</span> {
-    <span class="kw">fn</span> <span class="ident">sum</span><span class="op">&lt;</span><span class="ident">I</span>: <span class="ident">Iterator</span><span class="op">&lt;</span><span class="ident">Item</span><span class="op">=</span><span class="kw-2">&amp;</span><span class="lifetime">&#39;a</span> <span class="self">Self</span><span class="op">&gt;</span><span class="op">&gt;</span>(<span class="ident">iter</span>: <span class="ident">I</span>) -&gt; <span class="self">Self</span> {
+<span class="kw">impl</span><span class="op">&lt;</span><span class="lifetime">&#39;a</span>, <span class="ident">T</span>: <span class="ident">EnumSetType</span><span class="op">&gt;</span> <span class="ident">Sum</span><span class="op">&lt;</span><span class="kw-2">&amp;</span><span class="lifetime">&#39;a</span> <span class="ident">EnumSet</span><span class="op">&lt;</span><span class="ident">T</span><span class="op">&gt;</span><span class="op">&gt;</span> <span class="kw">for</span> <span class="ident">EnumSet</span><span class="op">&lt;</span><span class="ident">T</span><span class="op">&gt;</span> {
+    <span class="kw">fn</span> <span class="ident">sum</span><span class="op">&lt;</span><span class="ident">I</span>: <span class="ident">Iterator</span><span class="op">&lt;</span><span class="ident">Item</span> <span class="op">=</span> <span class="kw-2">&amp;</span><span class="lifetime">&#39;a</span> <span class="self">Self</span><span class="op">&gt;</span><span class="op">&gt;</span>(<span class="ident">iter</span>: <span class="ident">I</span>) -&gt; <span class="self">Self</span> {
         <span class="ident">iter</span>.<span class="ident">fold</span>(<span class="ident">EnumSet::empty</span>(), <span class="op">|</span><span class="ident">a</span>, <span class="ident">v</span><span class="op">|</span> <span class="ident">a</span> <span class="op">|</span> <span class="kw-2">*</span><span class="ident">v</span>)
     }
 }
-<span class="kw">impl</span> <span class="op">&lt;</span><span class="ident">T</span>: <span class="ident">EnumSetType</span><span class="op">&gt;</span> <span class="ident">Sum</span><span class="op">&lt;</span><span class="ident">T</span><span class="op">&gt;</span> <span class="kw">for</span> <span class="ident">EnumSet</span><span class="op">&lt;</span><span class="ident">T</span><span class="op">&gt;</span> {
-    <span class="kw">fn</span> <span class="ident">sum</span><span class="op">&lt;</span><span class="ident">I</span>: <span class="ident">Iterator</span><span class="op">&lt;</span><span class="ident">Item</span><span class="op">=</span><span class="ident">T</span><span class="op">&gt;</span><span class="op">&gt;</span>(<span class="ident">iter</span>: <span class="ident">I</span>) -&gt; <span class="self">Self</span> {
+<span class="kw">impl</span><span class="op">&lt;</span><span class="ident">T</span>: <span class="ident">EnumSetType</span><span class="op">&gt;</span> <span class="ident">Sum</span><span class="op">&lt;</span><span class="ident">T</span><span class="op">&gt;</span> <span class="kw">for</span> <span class="ident">EnumSet</span><span class="op">&lt;</span><span class="ident">T</span><span class="op">&gt;</span> {
+    <span class="kw">fn</span> <span class="ident">sum</span><span class="op">&lt;</span><span class="ident">I</span>: <span class="ident">Iterator</span><span class="op">&lt;</span><span class="ident">Item</span> <span class="op">=</span> <span class="ident">T</span><span class="op">&gt;</span><span class="op">&gt;</span>(<span class="ident">iter</span>: <span class="ident">I</span>) -&gt; <span class="self">Self</span> {
         <span class="ident">iter</span>.<span class="ident">fold</span>(<span class="ident">EnumSet::empty</span>(), <span class="op">|</span><span class="ident">a</span>, <span class="ident">v</span><span class="op">|</span> <span class="ident">a</span> <span class="op">|</span> <span class="ident">v</span>)
     }
 }
-<span class="kw">impl</span> <span class="op">&lt;</span><span class="lifetime">&#39;a</span>, <span class="ident">T</span>: <span class="ident">EnumSetType</span><span class="op">&gt;</span> <span class="ident">Sum</span><span class="op">&lt;</span><span class="kw-2">&amp;</span><span class="lifetime">&#39;a</span> <span class="ident">T</span><span class="op">&gt;</span> <span class="kw">for</span> <span class="ident">EnumSet</span><span class="op">&lt;</span><span class="ident">T</span><span class="op">&gt;</span> {
-    <span class="kw">fn</span> <span class="ident">sum</span><span class="op">&lt;</span><span class="ident">I</span>: <span class="ident">Iterator</span><span class="op">&lt;</span><span class="ident">Item</span><span class="op">=</span><span class="kw-2">&amp;</span><span class="lifetime">&#39;a</span> <span class="ident">T</span><span class="op">&gt;</span><span class="op">&gt;</span>(<span class="ident">iter</span>: <span class="ident">I</span>) -&gt; <span class="self">Self</span> {
+<span class="kw">impl</span><span class="op">&lt;</span><span class="lifetime">&#39;a</span>, <span class="ident">T</span>: <span class="ident">EnumSetType</span><span class="op">&gt;</span> <span class="ident">Sum</span><span class="op">&lt;</span><span class="kw-2">&amp;</span><span class="lifetime">&#39;a</span> <span class="ident">T</span><span class="op">&gt;</span> <span class="kw">for</span> <span class="ident">EnumSet</span><span class="op">&lt;</span><span class="ident">T</span><span class="op">&gt;</span> {
+    <span class="kw">fn</span> <span class="ident">sum</span><span class="op">&lt;</span><span class="ident">I</span>: <span class="ident">Iterator</span><span class="op">&lt;</span><span class="ident">Item</span> <span class="op">=</span> <span class="kw-2">&amp;</span><span class="lifetime">&#39;a</span> <span class="ident">T</span><span class="op">&gt;</span><span class="op">&gt;</span>(<span class="ident">iter</span>: <span class="ident">I</span>) -&gt; <span class="self">Self</span> {
         <span class="ident">iter</span>.<span class="ident">fold</span>(<span class="ident">EnumSet::empty</span>(), <span class="op">|</span><span class="ident">a</span>, <span class="ident">v</span><span class="op">|</span> <span class="ident">a</span> <span class="op">|</span> <span class="kw-2">*</span><span class="ident">v</span>)
     }
 }
 
-<span class="kw">impl</span> <span class="op">&lt;</span><span class="ident">T</span>: <span class="ident">EnumSetType</span>, <span class="ident">O</span>: <span class="ident">Into</span><span class="op">&lt;</span><span class="ident">EnumSet</span><span class="op">&lt;</span><span class="ident">T</span><span class="op">&gt;</span><span class="op">&gt;</span><span class="op">&gt;</span> <span class="ident">Sub</span><span class="op">&lt;</span><span class="ident">O</span><span class="op">&gt;</span> <span class="kw">for</span> <span class="ident">EnumSet</span><span class="op">&lt;</span><span class="ident">T</span><span class="op">&gt;</span> {
+<span class="kw">impl</span><span class="op">&lt;</span><span class="ident">T</span>: <span class="ident">EnumSetType</span>, <span class="ident">O</span>: <span class="ident">Into</span><span class="op">&lt;</span><span class="ident">EnumSet</span><span class="op">&lt;</span><span class="ident">T</span><span class="op">&gt;</span><span class="op">&gt;</span><span class="op">&gt;</span> <span class="ident">Sub</span><span class="op">&lt;</span><span class="ident">O</span><span class="op">&gt;</span> <span class="kw">for</span> <span class="ident">EnumSet</span><span class="op">&lt;</span><span class="ident">T</span><span class="op">&gt;</span> {
     <span class="kw">type</span> <span class="ident">Output</span> <span class="op">=</span> <span class="self">Self</span>;
     <span class="attribute">#[<span class="ident">inline</span>(<span class="ident">always</span>)]</span>
     <span class="kw">fn</span> <span class="ident">sub</span>(<span class="self">self</span>, <span class="ident">other</span>: <span class="ident">O</span>) -&gt; <span class="ident"><span class="self">Self</span>::Output</span> {
         <span class="self">self</span>.<span class="ident">difference</span>(<span class="ident">other</span>.<span class="ident">into</span>())
     }
 }
-<span class="kw">impl</span> <span class="op">&lt;</span><span class="ident">T</span>: <span class="ident">EnumSetType</span>, <span class="ident">O</span>: <span class="ident">Into</span><span class="op">&lt;</span><span class="ident">EnumSet</span><span class="op">&lt;</span><span class="ident">T</span><span class="op">&gt;</span><span class="op">&gt;</span><span class="op">&gt;</span> <span class="ident">BitAnd</span><span class="op">&lt;</span><span class="ident">O</span><span class="op">&gt;</span> <span class="kw">for</span> <span class="ident">EnumSet</span><span class="op">&lt;</span><span class="ident">T</span><span class="op">&gt;</span> {
+<span class="kw">impl</span><span class="op">&lt;</span><span class="ident">T</span>: <span class="ident">EnumSetType</span>, <span class="ident">O</span>: <span class="ident">Into</span><span class="op">&lt;</span><span class="ident">EnumSet</span><span class="op">&lt;</span><span class="ident">T</span><span class="op">&gt;</span><span class="op">&gt;</span><span class="op">&gt;</span> <span class="ident">BitAnd</span><span class="op">&lt;</span><span class="ident">O</span><span class="op">&gt;</span> <span class="kw">for</span> <span class="ident">EnumSet</span><span class="op">&lt;</span><span class="ident">T</span><span class="op">&gt;</span> {
     <span class="kw">type</span> <span class="ident">Output</span> <span class="op">=</span> <span class="self">Self</span>;
     <span class="attribute">#[<span class="ident">inline</span>(<span class="ident">always</span>)]</span>
     <span class="kw">fn</span> <span class="ident">bitand</span>(<span class="self">self</span>, <span class="ident">other</span>: <span class="ident">O</span>) -&gt; <span class="ident"><span class="self">Self</span>::Output</span> {
         <span class="self">self</span>.<span class="ident">intersection</span>(<span class="ident">other</span>.<span class="ident">into</span>())
     }
 }
-<span class="kw">impl</span> <span class="op">&lt;</span><span class="ident">T</span>: <span class="ident">EnumSetType</span>, <span class="ident">O</span>: <span class="ident">Into</span><span class="op">&lt;</span><span class="ident">EnumSet</span><span class="op">&lt;</span><span class="ident">T</span><span class="op">&gt;</span><span class="op">&gt;</span><span class="op">&gt;</span> <span class="ident">BitOr</span><span class="op">&lt;</span><span class="ident">O</span><span class="op">&gt;</span> <span class="kw">for</span> <span class="ident">EnumSet</span><span class="op">&lt;</span><span class="ident">T</span><span class="op">&gt;</span> {
+<span class="kw">impl</span><span class="op">&lt;</span><span class="ident">T</span>: <span class="ident">EnumSetType</span>, <span class="ident">O</span>: <span class="ident">Into</span><span class="op">&lt;</span><span class="ident">EnumSet</span><span class="op">&lt;</span><span class="ident">T</span><span class="op">&gt;</span><span class="op">&gt;</span><span class="op">&gt;</span> <span class="ident">BitOr</span><span class="op">&lt;</span><span class="ident">O</span><span class="op">&gt;</span> <span class="kw">for</span> <span class="ident">EnumSet</span><span class="op">&lt;</span><span class="ident">T</span><span class="op">&gt;</span> {
     <span class="kw">type</span> <span class="ident">Output</span> <span class="op">=</span> <span class="self">Self</span>;
     <span class="attribute">#[<span class="ident">inline</span>(<span class="ident">always</span>)]</span>
     <span class="kw">fn</span> <span class="ident">bitor</span>(<span class="self">self</span>, <span class="ident">other</span>: <span class="ident">O</span>) -&gt; <span class="ident"><span class="self">Self</span>::Output</span> {
         <span class="self">self</span>.<span class="ident">union</span>(<span class="ident">other</span>.<span class="ident">into</span>())
     }
 }
-<span class="kw">impl</span> <span class="op">&lt;</span><span class="ident">T</span>: <span class="ident">EnumSetType</span>, <span class="ident">O</span>: <span class="ident">Into</span><span class="op">&lt;</span><span class="ident">EnumSet</span><span class="op">&lt;</span><span class="ident">T</span><span class="op">&gt;</span><span class="op">&gt;</span><span class="op">&gt;</span> <span class="ident">BitXor</span><span class="op">&lt;</span><span class="ident">O</span><span class="op">&gt;</span> <span class="kw">for</span> <span class="ident">EnumSet</span><span class="op">&lt;</span><span class="ident">T</span><span class="op">&gt;</span> {
+<span class="kw">impl</span><span class="op">&lt;</span><span class="ident">T</span>: <span class="ident">EnumSetType</span>, <span class="ident">O</span>: <span class="ident">Into</span><span class="op">&lt;</span><span class="ident">EnumSet</span><span class="op">&lt;</span><span class="ident">T</span><span class="op">&gt;</span><span class="op">&gt;</span><span class="op">&gt;</span> <span class="ident">BitXor</span><span class="op">&lt;</span><span class="ident">O</span><span class="op">&gt;</span> <span class="kw">for</span> <span class="ident">EnumSet</span><span class="op">&lt;</span><span class="ident">T</span><span class="op">&gt;</span> {
     <span class="kw">type</span> <span class="ident">Output</span> <span class="op">=</span> <span class="self">Self</span>;
     <span class="attribute">#[<span class="ident">inline</span>(<span class="ident">always</span>)]</span>
     <span class="kw">fn</span> <span class="ident">bitxor</span>(<span class="self">self</span>, <span class="ident">other</span>: <span class="ident">O</span>) -&gt; <span class="ident"><span class="self">Self</span>::Output</span> {
@@ -1281,32 +1738,32 @@
     }
 }
 
-<span class="kw">impl</span> <span class="op">&lt;</span><span class="ident">T</span>: <span class="ident">EnumSetType</span>, <span class="ident">O</span>: <span class="ident">Into</span><span class="op">&lt;</span><span class="ident">EnumSet</span><span class="op">&lt;</span><span class="ident">T</span><span class="op">&gt;</span><span class="op">&gt;</span><span class="op">&gt;</span> <span class="ident">SubAssign</span><span class="op">&lt;</span><span class="ident">O</span><span class="op">&gt;</span> <span class="kw">for</span> <span class="ident">EnumSet</span><span class="op">&lt;</span><span class="ident">T</span><span class="op">&gt;</span> {
+<span class="kw">impl</span><span class="op">&lt;</span><span class="ident">T</span>: <span class="ident">EnumSetType</span>, <span class="ident">O</span>: <span class="ident">Into</span><span class="op">&lt;</span><span class="ident">EnumSet</span><span class="op">&lt;</span><span class="ident">T</span><span class="op">&gt;</span><span class="op">&gt;</span><span class="op">&gt;</span> <span class="ident">SubAssign</span><span class="op">&lt;</span><span class="ident">O</span><span class="op">&gt;</span> <span class="kw">for</span> <span class="ident">EnumSet</span><span class="op">&lt;</span><span class="ident">T</span><span class="op">&gt;</span> {
     <span class="attribute">#[<span class="ident">inline</span>(<span class="ident">always</span>)]</span>
     <span class="kw">fn</span> <span class="ident">sub_assign</span>(<span class="kw-2">&amp;mut</span> <span class="self">self</span>, <span class="ident">rhs</span>: <span class="ident">O</span>) {
         <span class="kw-2">*</span><span class="self">self</span> <span class="op">=</span> <span class="kw-2">*</span><span class="self">self</span> <span class="op">-</span> <span class="ident">rhs</span>;
     }
 }
-<span class="kw">impl</span> <span class="op">&lt;</span><span class="ident">T</span>: <span class="ident">EnumSetType</span>, <span class="ident">O</span>: <span class="ident">Into</span><span class="op">&lt;</span><span class="ident">EnumSet</span><span class="op">&lt;</span><span class="ident">T</span><span class="op">&gt;</span><span class="op">&gt;</span><span class="op">&gt;</span> <span class="ident">BitAndAssign</span><span class="op">&lt;</span><span class="ident">O</span><span class="op">&gt;</span> <span class="kw">for</span> <span class="ident">EnumSet</span><span class="op">&lt;</span><span class="ident">T</span><span class="op">&gt;</span> {
+<span class="kw">impl</span><span class="op">&lt;</span><span class="ident">T</span>: <span class="ident">EnumSetType</span>, <span class="ident">O</span>: <span class="ident">Into</span><span class="op">&lt;</span><span class="ident">EnumSet</span><span class="op">&lt;</span><span class="ident">T</span><span class="op">&gt;</span><span class="op">&gt;</span><span class="op">&gt;</span> <span class="ident">BitAndAssign</span><span class="op">&lt;</span><span class="ident">O</span><span class="op">&gt;</span> <span class="kw">for</span> <span class="ident">EnumSet</span><span class="op">&lt;</span><span class="ident">T</span><span class="op">&gt;</span> {
     <span class="attribute">#[<span class="ident">inline</span>(<span class="ident">always</span>)]</span>
     <span class="kw">fn</span> <span class="ident">bitand_assign</span>(<span class="kw-2">&amp;mut</span> <span class="self">self</span>, <span class="ident">rhs</span>: <span class="ident">O</span>) {
         <span class="kw-2">*</span><span class="self">self</span> <span class="op">=</span> <span class="kw-2">*</span><span class="self">self</span> <span class="op">&amp;</span> <span class="ident">rhs</span>;
     }
 }
-<span class="kw">impl</span> <span class="op">&lt;</span><span class="ident">T</span>: <span class="ident">EnumSetType</span>, <span class="ident">O</span>: <span class="ident">Into</span><span class="op">&lt;</span><span class="ident">EnumSet</span><span class="op">&lt;</span><span class="ident">T</span><span class="op">&gt;</span><span class="op">&gt;</span><span class="op">&gt;</span> <span class="ident">BitOrAssign</span><span class="op">&lt;</span><span class="ident">O</span><span class="op">&gt;</span> <span class="kw">for</span> <span class="ident">EnumSet</span><span class="op">&lt;</span><span class="ident">T</span><span class="op">&gt;</span> {
+<span class="kw">impl</span><span class="op">&lt;</span><span class="ident">T</span>: <span class="ident">EnumSetType</span>, <span class="ident">O</span>: <span class="ident">Into</span><span class="op">&lt;</span><span class="ident">EnumSet</span><span class="op">&lt;</span><span class="ident">T</span><span class="op">&gt;</span><span class="op">&gt;</span><span class="op">&gt;</span> <span class="ident">BitOrAssign</span><span class="op">&lt;</span><span class="ident">O</span><span class="op">&gt;</span> <span class="kw">for</span> <span class="ident">EnumSet</span><span class="op">&lt;</span><span class="ident">T</span><span class="op">&gt;</span> {
     <span class="attribute">#[<span class="ident">inline</span>(<span class="ident">always</span>)]</span>
     <span class="kw">fn</span> <span class="ident">bitor_assign</span>(<span class="kw-2">&amp;mut</span> <span class="self">self</span>, <span class="ident">rhs</span>: <span class="ident">O</span>) {
         <span class="kw-2">*</span><span class="self">self</span> <span class="op">=</span> <span class="kw-2">*</span><span class="self">self</span> <span class="op">|</span> <span class="ident">rhs</span>;
     }
 }
-<span class="kw">impl</span> <span class="op">&lt;</span><span class="ident">T</span>: <span class="ident">EnumSetType</span>, <span class="ident">O</span>: <span class="ident">Into</span><span class="op">&lt;</span><span class="ident">EnumSet</span><span class="op">&lt;</span><span class="ident">T</span><span class="op">&gt;</span><span class="op">&gt;</span><span class="op">&gt;</span> <span class="ident">BitXorAssign</span><span class="op">&lt;</span><span class="ident">O</span><span class="op">&gt;</span> <span class="kw">for</span> <span class="ident">EnumSet</span><span class="op">&lt;</span><span class="ident">T</span><span class="op">&gt;</span> {
+<span class="kw">impl</span><span class="op">&lt;</span><span class="ident">T</span>: <span class="ident">EnumSetType</span>, <span class="ident">O</span>: <span class="ident">Into</span><span class="op">&lt;</span><span class="ident">EnumSet</span><span class="op">&lt;</span><span class="ident">T</span><span class="op">&gt;</span><span class="op">&gt;</span><span class="op">&gt;</span> <span class="ident">BitXorAssign</span><span class="op">&lt;</span><span class="ident">O</span><span class="op">&gt;</span> <span class="kw">for</span> <span class="ident">EnumSet</span><span class="op">&lt;</span><span class="ident">T</span><span class="op">&gt;</span> {
     <span class="attribute">#[<span class="ident">inline</span>(<span class="ident">always</span>)]</span>
     <span class="kw">fn</span> <span class="ident">bitxor_assign</span>(<span class="kw-2">&amp;mut</span> <span class="self">self</span>, <span class="ident">rhs</span>: <span class="ident">O</span>) {
         <span class="kw-2">*</span><span class="self">self</span> <span class="op">=</span> <span class="kw-2">*</span><span class="self">self</span> <span class="op">^</span> <span class="ident">rhs</span>;
     }
 }
 
-<span class="kw">impl</span> <span class="op">&lt;</span><span class="ident">T</span>: <span class="ident">EnumSetType</span><span class="op">&gt;</span> <span class="ident">Not</span> <span class="kw">for</span> <span class="ident">EnumSet</span><span class="op">&lt;</span><span class="ident">T</span><span class="op">&gt;</span> {
+<span class="kw">impl</span><span class="op">&lt;</span><span class="ident">T</span>: <span class="ident">EnumSetType</span><span class="op">&gt;</span> <span class="ident">Not</span> <span class="kw">for</span> <span class="ident">EnumSet</span><span class="op">&lt;</span><span class="ident">T</span><span class="op">&gt;</span> {
     <span class="kw">type</span> <span class="ident">Output</span> <span class="op">=</span> <span class="self">Self</span>;
     <span class="attribute">#[<span class="ident">inline</span>(<span class="ident">always</span>)]</span>
     <span class="kw">fn</span> <span class="ident">not</span>(<span class="self">self</span>) -&gt; <span class="ident"><span class="self">Self</span>::Output</span> {
@@ -1314,23 +1771,25 @@
     }
 }
 
-<span class="kw">impl</span> <span class="op">&lt;</span><span class="ident">T</span>: <span class="ident">EnumSetType</span><span class="op">&gt;</span> <span class="ident">From</span><span class="op">&lt;</span><span class="ident">T</span><span class="op">&gt;</span> <span class="kw">for</span> <span class="ident">EnumSet</span><span class="op">&lt;</span><span class="ident">T</span><span class="op">&gt;</span> {
+<span class="kw">impl</span><span class="op">&lt;</span><span class="ident">T</span>: <span class="ident">EnumSetType</span><span class="op">&gt;</span> <span class="ident">From</span><span class="op">&lt;</span><span class="ident">T</span><span class="op">&gt;</span> <span class="kw">for</span> <span class="ident">EnumSet</span><span class="op">&lt;</span><span class="ident">T</span><span class="op">&gt;</span> {
     <span class="kw">fn</span> <span class="ident">from</span>(<span class="ident">t</span>: <span class="ident">T</span>) -&gt; <span class="self">Self</span> {
         <span class="ident">EnumSet::only</span>(<span class="ident">t</span>)
     }
 }
 
-<span class="kw">impl</span> <span class="op">&lt;</span><span class="ident">T</span>: <span class="ident">EnumSetType</span><span class="op">&gt;</span> <span class="ident">PartialEq</span><span class="op">&lt;</span><span class="ident">T</span><span class="op">&gt;</span> <span class="kw">for</span> <span class="ident">EnumSet</span><span class="op">&lt;</span><span class="ident">T</span><span class="op">&gt;</span> {
+<span class="kw">impl</span><span class="op">&lt;</span><span class="ident">T</span>: <span class="ident">EnumSetType</span><span class="op">&gt;</span> <span class="ident">PartialEq</span><span class="op">&lt;</span><span class="ident">T</span><span class="op">&gt;</span> <span class="kw">for</span> <span class="ident">EnumSet</span><span class="op">&lt;</span><span class="ident">T</span><span class="op">&gt;</span> {
     <span class="kw">fn</span> <span class="ident">eq</span>(<span class="kw-2">&amp;</span><span class="self">self</span>, <span class="ident">other</span>: <span class="kw-2">&amp;</span><span class="ident">T</span>) -&gt; <span class="ident">bool</span> {
         <span class="self">self</span>.<span class="ident">__priv_repr</span> <span class="op">==</span> <span class="ident">EnumSet::only</span>(<span class="kw-2">*</span><span class="ident">other</span>).<span class="ident">__priv_repr</span>
     }
 }
-<span class="kw">impl</span> <span class="op">&lt;</span><span class="ident">T</span>: <span class="ident">EnumSetType</span> <span class="op">+</span> <span class="ident">Debug</span><span class="op">&gt;</span> <span class="ident">Debug</span> <span class="kw">for</span> <span class="ident">EnumSet</span><span class="op">&lt;</span><span class="ident">T</span><span class="op">&gt;</span> {
+<span class="kw">impl</span><span class="op">&lt;</span><span class="ident">T</span>: <span class="ident">EnumSetType</span> <span class="op">+</span> <span class="ident">Debug</span><span class="op">&gt;</span> <span class="ident">Debug</span> <span class="kw">for</span> <span class="ident">EnumSet</span><span class="op">&lt;</span><span class="ident">T</span><span class="op">&gt;</span> {
     <span class="kw">fn</span> <span class="ident">fmt</span>(<span class="kw-2">&amp;</span><span class="self">self</span>, <span class="ident">f</span>: <span class="kw-2">&amp;mut</span> <span class="ident">Formatter</span><span class="op">&lt;</span><span class="lifetime">&#39;_</span><span class="op">&gt;</span>) -&gt; <span class="ident">fmt::Result</span> {
         <span class="kw">let</span> <span class="kw-2">mut</span> <span class="ident">is_first</span> <span class="op">=</span> <span class="bool-val">true</span>;
         <span class="ident">f</span>.<span class="ident">write_str</span>(<span class="string">&quot;EnumSet(&quot;</span>)<span class="question-mark">?</span>;
         <span class="kw">for</span> <span class="ident">v</span> <span class="kw">in</span> <span class="self">self</span>.<span class="ident">iter</span>() {
-            <span class="kw">if</span> <span class="op">!</span><span class="ident">is_first</span> { <span class="ident">f</span>.<span class="ident">write_str</span>(<span class="string">&quot; | &quot;</span>)<span class="question-mark">?</span>; }
+            <span class="kw">if</span> <span class="op">!</span><span class="ident">is_first</span> {
+                <span class="ident">f</span>.<span class="ident">write_str</span>(<span class="string">&quot; | &quot;</span>)<span class="question-mark">?</span>;
+            }
             <span class="ident">is_first</span> <span class="op">=</span> <span class="bool-val">false</span>;
             <span class="ident">v</span>.<span class="ident">fmt</span>(<span class="ident">f</span>)<span class="question-mark">?</span>;
         }
@@ -1340,31 +1799,31 @@
 }
 
 <span class="attribute">#[<span class="ident">allow</span>(<span class="ident">clippy::derive_hash_xor_eq</span>)]</span> <span class="comment">// This impl exists to change trait bounds only.</span>
-<span class="kw">impl</span> <span class="op">&lt;</span><span class="ident">T</span>: <span class="ident">EnumSetType</span><span class="op">&gt;</span> <span class="ident">Hash</span> <span class="kw">for</span> <span class="ident">EnumSet</span><span class="op">&lt;</span><span class="ident">T</span><span class="op">&gt;</span> {
+<span class="kw">impl</span><span class="op">&lt;</span><span class="ident">T</span>: <span class="ident">EnumSetType</span><span class="op">&gt;</span> <span class="ident">Hash</span> <span class="kw">for</span> <span class="ident">EnumSet</span><span class="op">&lt;</span><span class="ident">T</span><span class="op">&gt;</span> {
     <span class="kw">fn</span> <span class="ident">hash</span><span class="op">&lt;</span><span class="ident">H</span>: <span class="ident">Hasher</span><span class="op">&gt;</span>(<span class="kw-2">&amp;</span><span class="self">self</span>, <span class="ident">state</span>: <span class="kw-2">&amp;mut</span> <span class="ident">H</span>) {
         <span class="self">self</span>.<span class="ident">__priv_repr</span>.<span class="ident">hash</span>(<span class="ident">state</span>)
     }
 }
-<span class="kw">impl</span> <span class="op">&lt;</span><span class="ident">T</span>: <span class="ident">EnumSetType</span><span class="op">&gt;</span> <span class="ident">PartialOrd</span> <span class="kw">for</span> <span class="ident">EnumSet</span><span class="op">&lt;</span><span class="ident">T</span><span class="op">&gt;</span> {
+<span class="kw">impl</span><span class="op">&lt;</span><span class="ident">T</span>: <span class="ident">EnumSetType</span><span class="op">&gt;</span> <span class="ident">PartialOrd</span> <span class="kw">for</span> <span class="ident">EnumSet</span><span class="op">&lt;</span><span class="ident">T</span><span class="op">&gt;</span> {
     <span class="kw">fn</span> <span class="ident">partial_cmp</span>(<span class="kw-2">&amp;</span><span class="self">self</span>, <span class="ident">other</span>: <span class="kw-2">&amp;</span><span class="self">Self</span>) -&gt; <span class="prelude-ty">Option</span><span class="op">&lt;</span><span class="ident">Ordering</span><span class="op">&gt;</span> {
         <span class="self">self</span>.<span class="ident">__priv_repr</span>.<span class="ident">partial_cmp</span>(<span class="kw-2">&amp;</span><span class="ident">other</span>.<span class="ident">__priv_repr</span>)
     }
 }
-<span class="kw">impl</span> <span class="op">&lt;</span><span class="ident">T</span>: <span class="ident">EnumSetType</span><span class="op">&gt;</span> <span class="ident">Ord</span> <span class="kw">for</span> <span class="ident">EnumSet</span><span class="op">&lt;</span><span class="ident">T</span><span class="op">&gt;</span> {
+<span class="kw">impl</span><span class="op">&lt;</span><span class="ident">T</span>: <span class="ident">EnumSetType</span><span class="op">&gt;</span> <span class="ident">Ord</span> <span class="kw">for</span> <span class="ident">EnumSet</span><span class="op">&lt;</span><span class="ident">T</span><span class="op">&gt;</span> {
     <span class="kw">fn</span> <span class="ident">cmp</span>(<span class="kw-2">&amp;</span><span class="self">self</span>, <span class="ident">other</span>: <span class="kw-2">&amp;</span><span class="self">Self</span>) -&gt; <span class="ident">Ordering</span> {
         <span class="self">self</span>.<span class="ident">__priv_repr</span>.<span class="ident">cmp</span>(<span class="kw-2">&amp;</span><span class="ident">other</span>.<span class="ident">__priv_repr</span>)
     }
 }
 
 <span class="attribute">#[<span class="ident">cfg</span>(<span class="ident">feature</span> <span class="op">=</span> <span class="string">&quot;serde&quot;</span>)]</span>
-<span class="kw">impl</span> <span class="op">&lt;</span><span class="ident">T</span>: <span class="ident">EnumSetType</span><span class="op">&gt;</span> <span class="ident">Serialize</span> <span class="kw">for</span> <span class="ident">EnumSet</span><span class="op">&lt;</span><span class="ident">T</span><span class="op">&gt;</span> {
+<span class="kw">impl</span><span class="op">&lt;</span><span class="ident">T</span>: <span class="ident">EnumSetType</span><span class="op">&gt;</span> <span class="ident">Serialize</span> <span class="kw">for</span> <span class="ident">EnumSet</span><span class="op">&lt;</span><span class="ident">T</span><span class="op">&gt;</span> {
     <span class="kw">fn</span> <span class="ident">serialize</span><span class="op">&lt;</span><span class="ident">S</span>: <span class="ident">serde::Serializer</span><span class="op">&gt;</span>(<span class="kw-2">&amp;</span><span class="self">self</span>, <span class="ident">serializer</span>: <span class="ident">S</span>) -&gt; <span class="prelude-ty">Result</span><span class="op">&lt;</span><span class="ident">S::Ok</span>, <span class="ident">S::Error</span><span class="op">&gt;</span> {
         <span class="ident">T::serialize</span>(<span class="kw-2">*</span><span class="self">self</span>, <span class="ident">serializer</span>)
     }
 }
 
 <span class="attribute">#[<span class="ident">cfg</span>(<span class="ident">feature</span> <span class="op">=</span> <span class="string">&quot;serde&quot;</span>)]</span>
-<span class="kw">impl</span> <span class="op">&lt;</span><span class="lifetime">&#39;de</span>, <span class="ident">T</span>: <span class="ident">EnumSetType</span><span class="op">&gt;</span> <span class="ident">Deserialize</span><span class="op">&lt;</span><span class="lifetime">&#39;de</span><span class="op">&gt;</span> <span class="kw">for</span> <span class="ident">EnumSet</span><span class="op">&lt;</span><span class="ident">T</span><span class="op">&gt;</span> {
+<span class="kw">impl</span><span class="op">&lt;</span><span class="lifetime">&#39;de</span>, <span class="ident">T</span>: <span class="ident">EnumSetType</span><span class="op">&gt;</span> <span class="ident">Deserialize</span><span class="op">&lt;</span><span class="lifetime">&#39;de</span><span class="op">&gt;</span> <span class="kw">for</span> <span class="ident">EnumSet</span><span class="op">&lt;</span><span class="ident">T</span><span class="op">&gt;</span> {
     <span class="kw">fn</span> <span class="ident">deserialize</span><span class="op">&lt;</span><span class="ident">D</span>: <span class="ident">serde::Deserializer</span><span class="op">&lt;</span><span class="lifetime">&#39;de</span><span class="op">&gt;</span><span class="op">&gt;</span>(<span class="ident">deserializer</span>: <span class="ident">D</span>) -&gt; <span class="prelude-ty">Result</span><span class="op">&lt;</span><span class="self">Self</span>, <span class="ident">D::Error</span><span class="op">&gt;</span> {
         <span class="ident">T::deserialize</span>(<span class="ident">deserializer</span>)
     }
@@ -1375,12 +1834,13 @@
 <span class="kw">pub</span> <span class="kw">struct</span> <span class="ident">EnumSetIter</span><span class="op">&lt;</span><span class="ident">T</span>: <span class="ident">EnumSetType</span><span class="op">&gt;</span> {
     <span class="ident">set</span>: <span class="ident">EnumSet</span><span class="op">&lt;</span><span class="ident">T</span><span class="op">&gt;</span>,
 }
-<span class="kw">impl</span> <span class="op">&lt;</span><span class="ident">T</span>: <span class="ident">EnumSetType</span><span class="op">&gt;</span> <span class="ident">EnumSetIter</span><span class="op">&lt;</span><span class="ident">T</span><span class="op">&gt;</span> {
+<span class="kw">impl</span><span class="op">&lt;</span><span class="ident">T</span>: <span class="ident">EnumSetType</span><span class="op">&gt;</span> <span class="ident">EnumSetIter</span><span class="op">&lt;</span><span class="ident">T</span><span class="op">&gt;</span> {
     <span class="kw">fn</span> <span class="ident">new</span>(<span class="ident">set</span>: <span class="ident">EnumSet</span><span class="op">&lt;</span><span class="ident">T</span><span class="op">&gt;</span>) -&gt; <span class="ident">EnumSetIter</span><span class="op">&lt;</span><span class="ident">T</span><span class="op">&gt;</span> {
         <span class="ident">EnumSetIter</span> { <span class="ident">set</span> }
     }
 }
-<span class="kw">impl</span> <span class="op">&lt;</span><span class="ident">T</span>: <span class="ident">EnumSetType</span><span class="op">&gt;</span> <span class="ident">Iterator</span> <span class="kw">for</span> <span class="ident">EnumSetIter</span><span class="op">&lt;</span><span class="ident">T</span><span class="op">&gt;</span> {
+
+<span class="kw">impl</span><span class="op">&lt;</span><span class="ident">T</span>: <span class="ident">EnumSetType</span><span class="op">&gt;</span> <span class="ident">Iterator</span> <span class="kw">for</span> <span class="ident">EnumSetIter</span><span class="op">&lt;</span><span class="ident">T</span><span class="op">&gt;</span> {
     <span class="kw">type</span> <span class="ident">Item</span> <span class="op">=</span> <span class="ident">T</span>;
 
     <span class="kw">fn</span> <span class="ident">next</span>(<span class="kw-2">&amp;mut</span> <span class="self">self</span>) -&gt; <span class="prelude-ty">Option</span><span class="op">&lt;</span><span class="ident"><span class="self">Self</span>::Item</span><span class="op">&gt;</span> {
@@ -1398,11 +1858,25 @@
     }
 }
 
+<span class="kw">impl</span><span class="op">&lt;</span><span class="ident">T</span>: <span class="ident">EnumSetType</span><span class="op">&gt;</span> <span class="ident">DoubleEndedIterator</span> <span class="kw">for</span> <span class="ident">EnumSetIter</span><span class="op">&lt;</span><span class="ident">T</span><span class="op">&gt;</span> {
+    <span class="kw">fn</span> <span class="ident">next_back</span>(<span class="kw-2">&amp;mut</span> <span class="self">self</span>) -&gt; <span class="prelude-ty">Option</span><span class="op">&lt;</span><span class="ident"><span class="self">Self</span>::Item</span><span class="op">&gt;</span> {
+        <span class="kw">if</span> <span class="self">self</span>.<span class="ident">set</span>.<span class="ident">is_empty</span>() {
+            <span class="prelude-val">None</span>
+        } <span class="kw">else</span> {
+            <span class="kw">let</span> <span class="ident">bit</span> <span class="op">=</span> <span class="ident">T::Repr::WIDTH</span> <span class="op">-</span> <span class="number">1</span> <span class="op">-</span> <span class="self">self</span>.<span class="ident">set</span>.<span class="ident">__priv_repr</span>.<span class="ident">leading_zeros</span>();
+            <span class="self">self</span>.<span class="ident">set</span>.<span class="ident">__priv_repr</span>.<span class="ident">remove_bit</span>(<span class="ident">bit</span>);
+            <span class="kw">unsafe</span> { <span class="prelude-val">Some</span>(<span class="ident">T::enum_from_u32</span>(<span class="ident">bit</span>)) }
+        }
+    }
+}
+
 <span class="kw">impl</span><span class="op">&lt;</span><span class="ident">T</span>: <span class="ident">EnumSetType</span><span class="op">&gt;</span> <span class="ident">ExactSizeIterator</span> <span class="kw">for</span> <span class="ident">EnumSetIter</span><span class="op">&lt;</span><span class="ident">T</span><span class="op">&gt;</span> {}
 
 <span class="kw">impl</span><span class="op">&lt;</span><span class="ident">T</span>: <span class="ident">EnumSetType</span><span class="op">&gt;</span> <span class="ident">Extend</span><span class="op">&lt;</span><span class="ident">T</span><span class="op">&gt;</span> <span class="kw">for</span> <span class="ident">EnumSet</span><span class="op">&lt;</span><span class="ident">T</span><span class="op">&gt;</span> {
     <span class="kw">fn</span> <span class="ident">extend</span><span class="op">&lt;</span><span class="ident">I</span>: <span class="ident">IntoIterator</span><span class="op">&lt;</span><span class="ident">Item</span> <span class="op">=</span> <span class="ident">T</span><span class="op">&gt;</span><span class="op">&gt;</span>(<span class="kw-2">&amp;mut</span> <span class="self">self</span>, <span class="ident">iter</span>: <span class="ident">I</span>) {
-        <span class="ident">iter</span>.<span class="ident">into_iter</span>().<span class="ident">for_each</span>(<span class="op">|</span><span class="ident">v</span><span class="op">|</span> { <span class="self">self</span>.<span class="ident">insert</span>(<span class="ident">v</span>); });
+        <span class="ident">iter</span>.<span class="ident">into_iter</span>().<span class="ident">for_each</span>(<span class="op">|</span><span class="ident">v</span><span class="op">|</span> {
+            <span class="self">self</span>.<span class="ident">insert</span>(<span class="ident">v</span>);
+        });
     }
 }
 
@@ -1416,7 +1890,9 @@
 
 <span class="kw">impl</span><span class="op">&lt;</span><span class="ident">T</span>: <span class="ident">EnumSetType</span><span class="op">&gt;</span> <span class="ident">Extend</span><span class="op">&lt;</span><span class="ident">EnumSet</span><span class="op">&lt;</span><span class="ident">T</span><span class="op">&gt;</span><span class="op">&gt;</span> <span class="kw">for</span> <span class="ident">EnumSet</span><span class="op">&lt;</span><span class="ident">T</span><span class="op">&gt;</span> {
     <span class="kw">fn</span> <span class="ident">extend</span><span class="op">&lt;</span><span class="ident">I</span>: <span class="ident">IntoIterator</span><span class="op">&lt;</span><span class="ident">Item</span> <span class="op">=</span> <span class="ident">EnumSet</span><span class="op">&lt;</span><span class="ident">T</span><span class="op">&gt;</span><span class="op">&gt;</span><span class="op">&gt;</span>(<span class="kw-2">&amp;mut</span> <span class="self">self</span>, <span class="ident">iter</span>: <span class="ident">I</span>) {
-        <span class="ident">iter</span>.<span class="ident">into_iter</span>().<span class="ident">for_each</span>(<span class="op">|</span><span class="ident">v</span><span class="op">|</span> { <span class="self">self</span>.<span class="ident">insert_all</span>(<span class="ident">v</span>); });
+        <span class="ident">iter</span>.<span class="ident">into_iter</span>().<span class="ident">for_each</span>(<span class="op">|</span><span class="ident">v</span><span class="op">|</span> {
+            <span class="self">self</span>.<span class="ident">insert_all</span>(<span class="ident">v</span>);
+        });
     }
 }
 
@@ -1472,5 +1948,5 @@
     };
 }
 </code></pre></div>
-</section><section id="search" class="content hidden"></section></div></main><div id="rustdoc-vars" data-root-path="../../" data-current-crate="enumset" data-themes="ayu,dark,light" data-resource-suffix="" data-rustdoc-version="1.61.0-nightly (63b8f01bb 2022-03-24)" ></div>
+</section></div></main><div id="rustdoc-vars" data-root-path="../../" data-current-crate="enumset" data-themes="ayu,dark,light" data-resource-suffix="" data-rustdoc-version="1.63.0-nightly (28b891916 2022-05-29)" ></div>
 </body></html>
